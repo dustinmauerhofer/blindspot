@@ -4,7 +4,7 @@ import os
 import cv2
 import imghdr
 from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
+from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout, BatchNormalization
 from keras.saving.saving_api import load_model
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
@@ -49,15 +49,27 @@ test = data.skip(train_size + val_size).take(test_size)
 
 # Deep Learning
 
+
 model = Sequential()
 
-model.add(Conv2D(16, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+model.add(Conv2D(64, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(32, (3, 3), 1, activation='relu'))
+model.add(Conv2D(128, (3, 3), 1, activation='relu'))
+model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(16, (3, 3), 1, activation='relu'))
+model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D())
+
+model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D())
+
+model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
 model.add(Flatten())
@@ -75,13 +87,7 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
 
-model.save("apple_pear_orange_blueberry_testV2.h5");
-
-
-# test
-
-
-
+model.save("apple_pear_orange_blueberry_milk_testV1.1.h5");
 
 # Evaluate Performance
 
