@@ -6,8 +6,11 @@ import imghdr
 
 from keras.models import Sequential
 <<<<<<< HEAD
+<<<<<<< HEAD
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout, BatchNormalization
 =======
+=======
+>>>>>>> parent of c5c1f28 (dln works now)
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
 from keras.saving.saving_api import load_model
 >>>>>>> parent of c5c1f28 (dln works now)
@@ -55,6 +58,7 @@ test = data.skip(train_size + val_size).take(test_size)
 # Data Agumentation Layers
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 # Deep Learning
@@ -83,6 +87,17 @@ model.add(BatchNormalization())
 model = Sequential()
 
 model.add(Conv2D(16, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+=======
+model = Sequential()
+
+model.add(Conv2D(16, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(32, (3, 3), 1, activation='relu'))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(16, (3, 3), 1, activation='relu'))
+>>>>>>> parent of c5c1f28 (dln works now)
 model.add(MaxPooling2D())
 
 model.add(Conv2D(32, (3, 3), 1, activation='relu'))
@@ -105,8 +120,11 @@ hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_c
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #model.save("AugmentedV1.h5");
 =======
+=======
+>>>>>>> parent of c5c1f28 (dln works now)
 model.save("apple_pear_orange_blueberry_testV2.h5");
 
 
@@ -114,6 +132,9 @@ model.save("apple_pear_orange_blueberry_testV2.h5");
 
 
 
+<<<<<<< HEAD
+>>>>>>> parent of c5c1f28 (dln works now)
+=======
 >>>>>>> parent of c5c1f28 (dln works now)
 
 # Evaluate Performance
