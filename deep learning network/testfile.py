@@ -3,9 +3,9 @@ import tensorflow as tf
 from PIL import Image
 from keras.preprocessing import image
 
-loaded_model = tf.keras.models.load_model("apple_pear_orange_blueberry_milk_testV1.1.h5")
+loaded_model = tf.keras.models.load_model("apple_pear_orange_blueberry_testV2.h5")
 
-img_path = "testing/milch3.jpg"
+img_path = "testing/apples.jpg"
 img = Image.open(img_path)
 img = img.resize((256, 256))  # Resize the image to the desired size
 img = np.array(img) / 255.0  # Normalize the image to [0, 1]
@@ -15,10 +15,52 @@ predictions = loaded_model.predict(img)
 
 predicted_class = np.argmax(predictions, axis=1)
 
-#class_labels = ["pear","blueberry", "orange", "apple"]
-class_labels = ["apple","blueberry","milk", "orange", "apple"]
-
+class_labels = ["blueberry","pear", "orange", "apple"]
 predicted_label = class_labels[predicted_class[0]]
 
-print(f"The DLN predicts that this is a {predicted_label}, array: {predicted_class}.")
+print(f"The DLN predicts that this is a {predicted_label}.")
 
+img_path = "testing/orange.jpg"
+img = Image.open(img_path)
+img = img.resize((256, 256))  # Resize the image to the desired size
+img = np.array(img) / 255.0  # Normalize the image to [0, 1]
+img = np.expand_dims(img, axis=0)
+
+predictions = loaded_model.predict(img)
+
+predicted_class = np.argmax(predictions, axis=1)
+
+class_labels = ["blueberry","pear", "orange", "apple"]
+predicted_label = class_labels[predicted_class[0]]
+
+print(f"The DLN predicts that this is a {predicted_label}.")
+
+img_path = "testing/pear.jpg"
+img = Image.open(img_path)
+img = img.resize((256, 256))  # Resize the image to the desired size
+img = np.array(img) / 255.0  # Normalize the image to [0, 1]
+img = np.expand_dims(img, axis=0)
+
+predictions = loaded_model.predict(img)
+
+predicted_class = np.argmax(predictions, axis=1)
+
+class_labels = ["blueberry","pear", "orange", "apple"]
+predicted_label = class_labels[predicted_class[0]]
+
+print(f"The DLN predicts that this is a {predicted_label}.")
+
+img_path = "testing/blueberry.jpg"
+img = Image.open(img_path)
+img = img.resize((256, 256))  # Resize the image to the desired size
+img = np.array(img) / 255.0  # Normalize the image to [0, 1]
+img = np.expand_dims(img, axis=0)
+
+predictions = loaded_model.predict(img)
+
+predicted_class = np.argmax(predictions, axis=1)
+
+class_labels = ["blueberry","pear", "orange", "apple"]
+predicted_label = class_labels[predicted_class[0]]
+
+print(f"The DLN predicts that this is a {predicted_label}.")

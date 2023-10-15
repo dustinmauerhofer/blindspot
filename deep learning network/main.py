@@ -5,7 +5,12 @@ import cv2
 import imghdr
 
 from keras.models import Sequential
+<<<<<<< HEAD
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout, BatchNormalization
+=======
+from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
+from keras.saving.saving_api import load_model
+>>>>>>> parent of c5c1f28 (dln works now)
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 for gpu in gpus:
@@ -49,6 +54,7 @@ test = data.skip(train_size + val_size).take(test_size)
 
 # Data Agumentation Layers
 
+<<<<<<< HEAD
 
 
 # Deep Learning
@@ -73,6 +79,17 @@ model.add(MaxPooling2D())
 
 model.add(Conv2D(64, (3, 3),1, activation='relu',))
 model.add(BatchNormalization())
+=======
+model = Sequential()
+
+model.add(Conv2D(16, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(32, (3, 3), 1, activation='relu'))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(16, (3, 3), 1, activation='relu'))
+>>>>>>> parent of c5c1f28 (dln works now)
 model.add(MaxPooling2D())
 
 model.add(Dense(num_classes, activation='softmax'))
@@ -87,7 +104,17 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
 
+<<<<<<< HEAD
 #model.save("AugmentedV1.h5");
+=======
+model.save("apple_pear_orange_blueberry_testV2.h5");
+
+
+# test
+
+
+
+>>>>>>> parent of c5c1f28 (dln works now)
 
 # Evaluate Performance
 
