@@ -1,11 +1,11 @@
-import numpy as np
+
 import tensorflow as tf
 import os
 import cv2
 import imghdr
+
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout, BatchNormalization
-from keras.saving.saving_api import load_model
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 for gpu in gpus:
@@ -31,7 +31,7 @@ for image_class in os.listdir(data_dir):
 
 # Load data
 
-data = tf.keras.utils.image_dataset_from_directory('data')  # builds image dataset for you
+data = tf.keras.utils.image_dataset_from_directory('data',)
 
 # Preprocess Data
 data = data.map(lambda x, y: (x / 255, tf.one_hot(y, depth=num_classes)))
@@ -47,35 +47,35 @@ train = data.take(train_size)
 val = data.skip(train_size).take(val_size)
 test = data.skip(train_size + val_size).take(test_size)
 
-# Deep Learning
+# Data Agumentation Layers
 
+
+
+# Deep Learning
 
 model = Sequential()
 
-model.add(Conv2D(64, (3, 3), 1, activation='relu', input_shape=(256, 256, 3)))
+model.add(Conv2D(64, (3, 3),1, activation='relu', input_shape=(256, 256, 3)))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(128, (3, 3), 1, activation='relu'))
+model.add(Conv2D(128, (3, 3),1, activation='relu',))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(Conv2D(64, (3, 3),1, activation='relu',))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(Conv2D(64, (3, 3),1, activation='relu',))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-model.add(Conv2D(64, (3, 3), 1, activation='relu'))
+model.add(Conv2D(64, (3, 3),1, activation='relu',))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
-
-model.add(Flatten())
 
 model.add(Dense(num_classes, activation='softmax'))
-
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
@@ -87,7 +87,7 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
 
-model.save("apple_pear_orange_blueberry_milk_testV1.1.h5");
+#model.save("AugmentedV1.h5");
 
 # Evaluate Performance
 
@@ -105,3 +105,4 @@ for batch in test.as_numpy_iterator():
 print(f'Precision: {precision.result().numpy()}, Recall: {recall.result().numpy()}, Accuracy: {accuracy.result().numpy()}')
 
 
+#https://www.datacamp.com/tutorial/complete-guide-data-augmentation
