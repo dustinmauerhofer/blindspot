@@ -1,6 +1,5 @@
-
-import tensorflow as tf
 import os
+import tensorflow as tf
 import cv2
 import imghdr
 
@@ -12,11 +11,13 @@ from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
 from keras.saving.saving_api import load_model
 
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
-for gpu in gpus:
-    tf.config.experimental.set_memory_growth(gpu, True)
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
-data_dir = 'data'
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+if len(physical_devices) > 0:
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+data_dir = 'augmented_data'
 image_exts = ['jpeg', 'jpg', 'bmp', 'png']
 num_classes = len(os.listdir(data_dir));
 # Clean out dodgy images
@@ -36,7 +37,7 @@ for image_class in os.listdir(data_dir):
 
 # Load data
 
-data = tf.keras.utils.image_dataset_from_directory('data',)
+data = tf.keras.utils.image_dataset_from_directory('augmented_data',)
 
 # Preprocess Data
 data = data.map(lambda x, y: (x / 255, tf.one_hot(y, depth=num_classes)))
@@ -51,9 +52,6 @@ test_size = int(len(data) * 0.1) + 1  # used to test the data
 train = data.take(train_size)
 val = data.skip(train_size).take(val_size)
 test = data.skip(train_size + val_size).take(test_size)
-
-# Data Agumentation Layers
-
 
 # Deep Learning
 model = Sequential();
@@ -70,11 +68,9 @@ model.add(Conv2D(64, (3, 3), 1, activation='relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
 
-
 model.add(Conv2D(64, (3, 3), 1, activation='relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D())
-
 
 model.add(Conv2D(64, (3, 3), 1, activation='relu'))
 model.add(BatchNormalization())
@@ -90,13 +86,7 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 
 hist = model.fit(train, epochs=20, validation_data=val, callbacks=[tensorboard_callback])
 
-
-
-
-
-#model.save("apple_pear_orange_blueberry_testV2.h5");
-
-
+model.save("apple_pear_orange_blueberry_testV2.h5");
 
 # Evaluate Performance
 
