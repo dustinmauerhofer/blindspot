@@ -20,5 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private async void OnPictureRecogntion(object sender, EventArgs e)
+        {
+            Test.WriteInFile();
+            //await PictureRecognition.ScanPicture();          
+        }
     }
 }
