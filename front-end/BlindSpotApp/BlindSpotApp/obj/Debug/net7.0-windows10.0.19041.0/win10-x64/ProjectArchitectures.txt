@@ -1,0 +1,1 @@
+C:\Schule\Schule5\SYP\blindspot\front-end\BlindSpotApp\BlindSpotApp\BlindSpotApp.csproj;x64
