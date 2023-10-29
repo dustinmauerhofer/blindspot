@@ -1,53 +1,41 @@
-﻿using System.Diagnostics;
-
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Threading.Tasks;
+using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
 
 namespace BlindSpot
 {
     public class PictureRecognition
     {
-        public static async Task ScanPicture()
+        public static async Task<string> ScanPicture()
         {
-       
-            string pythonScript = Path.Combine(Environment.CurrentDirectory, "ai_model", "main.py");
-            string pictureParameter = Path.Combine(Environment.CurrentDirectory, "ai_model", "blueberry.jpg");
+            //string output = String.Empty;
 
-            string outputPath = Path.Combine(Environment.CurrentDirectory, "ai_model", "output.txt");
+            //// Get the current working directory
+            //string currentDirectory = Directory.GetCurrentDirectory();
 
-            ProcessStartInfo startInfo = new ProcessStartInfo
-            {
-                FileName = "python",
-                Arguments = $"\"{pythonScript}\" \"{pictureParameter}\"",
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                WorkingDirectory = Path.GetDirectoryName(pythonScript)
-            };
+            //// Construct the full path to the Python script
+            //string scriptPath = @"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\main.py";
+            //string imagePath = @"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\blueberyy.jpg";
 
-            using (Process process = new Process { StartInfo = startInfo })
-            {
-                try
-                {
-                    process.Start();
-                }
-                catch (Exception ex)
-                {
-                    using(StreamWriter writer = new StreamWriter(outputPath))
-                    {
-                        writer.WriteLine(ex.ToString());
-                    }
-                    return;
-                }
+            //// Create a Python runtime
+            //var pythonRuntime = Python.CreateRuntime();
+            //dynamic python = pythonRuntime.UseFile(scriptPath);
 
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    string output = reader.ReadToEnd();
-                    process.WaitForExit();
+            //// Call a Python function from your script
+            //output = python.ScanImage(imagePath);
 
-                    Console.WriteLine("Output: " + output);
+            //// Display the output received from the Python script
 
-                    File.WriteAllText(outputPath, output);
-                }
-            }
+            //return output;
+
+            return $"{File.Exists(@"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\main.py")}";
         }
     }
 }
+
+
+

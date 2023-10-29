@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Schule\\Schule5\\SYP\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj": {}
+    "C:\\Users\\dustin\\Documents\\GitHub\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj": {}
   },
   "projects": {
-    "C:\\Schule\\Schule5\\SYP\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj": {
+    "C:\\Users\\dustin\\Documents\\GitHub\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Schule\\Schule5\\SYP\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj",
+        "projectUniqueName": "C:\\Users\\dustin\\Documents\\GitHub\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj",
         "projectName": "BlindSpotApp",
-        "projectPath": "C:\\Schule\\Schule5\\SYP\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj",
-        "packagesPath": "C:\\Users\\JanLe\\.nuget\\packages\\",
-        "outputPath": "C:\\Schule\\Schule5\\SYP\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\obj\\",
+        "projectPath": "C:\\Users\\dustin\\Documents\\GitHub\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\BlindSpotApp.csproj",
+        "packagesPath": "C:\\Users\\dustin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dustin\\Documents\\GitHub\\blindspot\\front-end\\BlindSpotApp\\BlindSpotApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\JanLe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dustin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,8 +31,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-android33.0": {
@@ -88,7 +87,7 @@
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.81, )",
               "autoReferenced": true
             },
             "Xamarin.Android.Glide": {
@@ -175,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
@@ -206,7 +205,7 @@
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.81, )",
               "autoReferenced": true
             }
           },
@@ -238,7 +237,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
@@ -269,7 +268,7 @@
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.81, )",
               "autoReferenced": true
             }
           },
@@ -302,7 +301,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
@@ -333,12 +332,18 @@
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.81, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.81, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Windows.SDK.BuildTools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.22621.755, )",
               "autoReferenced": true
             },
             "Microsoft.WindowsAppSDK": {
@@ -361,19 +366,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.10, 7.0.10]"
+              "version": "[7.0.5, 7.0.5]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.10, 7.0.10]"
+              "version": "[7.0.5, 7.0.5]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.29, 10.0.19041.29]"
+              "version": "[10.0.19041.28, 10.0.19041.28]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[7.0.10, 7.0.10]"
+              "version": "[7.0.5, 7.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -393,7 +398,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -23,8 +23,8 @@
 
         private async void OnPictureRecogntion(object sender, EventArgs e)
         {
-            Test.WriteInFile();
-            //await PictureRecognition.ScanPicture();          
+
+            outputLabel.Text = await PictureRecognition.ScanPicture();      
         }
     }
 }

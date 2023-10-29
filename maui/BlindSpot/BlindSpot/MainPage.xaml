@@ -35,6 +35,8 @@
                 Clicked="OnPictureRecogntion"
                 HorizontalOptions="Center" />
 
+            <Label x:Name="outputLabel"/>
+
         </VerticalStackLayout>
     </ScrollView>
 

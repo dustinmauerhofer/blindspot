@@ -958,6 +958,16 @@ C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\ne
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\IronPython.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\IronPython.Modules.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\IronPython.SQLite.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\IronPython.Wpf.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\Microsoft.Dynamic.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\Microsoft.Scripting.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\Microsoft.Scripting.Metadata.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\Mono.Unix.dll
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\Mono.Unix.pdb
+C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\System.CodeDom.dll
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
