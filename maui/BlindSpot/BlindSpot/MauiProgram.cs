@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Camera.MAUI;
+using Microsoft.Extensions.Logging;
+using ZXing.Net.Maui.Controls;
 
 namespace BlindSpot
 {
@@ -8,7 +10,9 @@ namespace BlindSpot
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
+                .UseMauiApp<App>()   
+                .UseBarcodeReader()
+                .UseMauiCameraView()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

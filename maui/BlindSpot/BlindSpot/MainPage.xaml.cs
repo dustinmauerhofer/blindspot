@@ -1,4 +1,7 @@
-﻿namespace BlindSpot
+﻿using ZXing.Net.Maui;
+using ZXing.Net.Maui.Controls;
+
+namespace BlindSpot
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +10,11 @@
         public MainPage()
         {
             InitializeComponent();
+            //barcodeReader.Options = new BarcodeReaderOptions()
+            //{
+            //  AutoRotate = true,
+            //};
+
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -21,10 +29,35 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        private async void OnPictureRecogntion(object sender, EventArgs e)
+        private void CameraBarcodeReaderView_BarcodesDetected(object sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)
         {
+            Dispatcher.Dispatch(() =>
+            {
+                barcodeResult.Text = $"{e.Results[0].Value} " +
+                $"{e.Results[0].Format}";
 
-            outputLabel.Text = await PictureRecognition.ScanPicture();      
+            });
+        }
+
+        private void cameraView_CamerasLoaded(object sender, EventArgs e)
+        {
+            cameraView.Camera = cameraView.Cameras.First();
+
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await cameraView.StopCameraAsync();
+                var result = await cameraView.StartCameraAsync();
+   
+
+            });
+        }
+
+        private void TakePhoto_Clicked(object sender, EventArgs e)
+        {
+            ImageSource picture = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);   
+            Task<string> output = PictureRecognition.ScanPicture(picture);
+            outputLabel.Text = output.Result;
+
         }
     }
 }

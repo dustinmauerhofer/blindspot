@@ -1,41 +1,87 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
-using System.Reflection;
+using System.Net.Http;
 using System.Threading.Tasks;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
+using Microsoft.Maui.ApplicationModel;
 
 namespace BlindSpot
 {
     public class PictureRecognition
     {
-        public static async Task<string> ScanPicture()
+        public static async Task<string> ScanPicture(ImageSource picture)
         {
-            //string output = String.Empty;
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    // Set the URL of your Flask web service
+                    string apiUrl = "http://127.0.0.1:5000/predict";
 
-            //// Get the current working directory
-            //string currentDirectory = Directory.GetCurrentDirectory();
+                    // Convert the ImageSource to a byte array
+                    byte[] imageBytes = await GetImageBytesFromImageSource(picture);
 
-            //// Construct the full path to the Python script
-            //string scriptPath = @"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\main.py";
-            //string imagePath = @"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\blueberyy.jpg";
+                    // Create a ByteArrayContent to send the image as a POST request
+                    ByteArrayContent content = new ByteArrayContent(imageBytes);
 
-            //// Create a Python runtime
-            //var pythonRuntime = Python.CreateRuntime();
-            //dynamic python = pythonRuntime.UseFile(scriptPath);
+                    // Create a multipart form data content
+                    MultipartFormDataContent form = new MultipartFormDataContent();
+                    form.Add(content, "image", "image.jpg");
 
-            //// Call a Python function from your script
-            //output = python.ScanImage(imagePath);
+                    // Send a POST request to the Flask web service
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, form);
 
-            //// Display the output received from the Python script
-
-            //return output;
-
-            return $"{File.Exists(@"C:\Users\dustin\Documents\GitHub\blindspot\maui\BlindSpot\BlindSpot\AI\main.py")}";
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read and print the response content
+                        string responseContent = await response.Content.ReadAsStringAsync();
+                        return "Predicted Label: " + responseContent;
+                    }
+                    else
+                    {
+                        return "Error: " + response.StatusCode;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return "An error occurred: " + ex.Message;
+                }
+            }
         }
+
+        private static async Task<byte[]> GetImageBytesFromImageSource(ImageSource imageSource)
+        {
+            try
+            {
+                if (imageSource is FileImageSource fileImageSource)
+                {
+                    // For a FileImageSource, load the image from a file
+                    string filePath = fileImageSource.File;
+                    byte[] imageBytes = File.ReadAllBytes(filePath);
+                    return imageBytes;
+                }
+                else if (imageSource is StreamImageSource streamImageSource)
+                {
+                    // For a StreamImageSource, load the image from a stream
+                    using (Stream stream = await streamImageSource.Stream(CancellationToken.None))
+                    {
+                        if (stream != null)
+                        {
+                            using (MemoryStream memoryStream = new MemoryStream())
+                            {
+                                await stream.CopyToAsync(memoryStream);
+                                return memoryStream.ToArray();
+                            }
+                        }
+                    }
+                }
+
+                return null; // Handle other types of ImageSource as needed
+            }
+            catch (Exception)
+            {
+                return null; // Handle any exceptions here
+            }
+        }
+
     }
 }
-
-
-
