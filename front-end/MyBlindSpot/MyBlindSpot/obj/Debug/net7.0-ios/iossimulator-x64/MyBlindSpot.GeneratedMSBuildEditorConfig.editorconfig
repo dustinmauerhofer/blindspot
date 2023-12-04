@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyBlindSpot
+build_property.ProjectDir = C:\Schule\Schule5\SYP\blindspot\front-end\MyBlindSpot\MyBlindSpot\
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/AddItemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.AddItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddItemPage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/BlindMenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.BlindMenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = BlindMenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = BlindMenuPage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/CreateStoragePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.CreateStoragePage.xaml
+build_metadata.AdditionalFiles.TargetPath = CreateStoragePage.xaml
+build_metadata.AdditionalFiles.RelativePath = CreateStoragePage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/EditStoragePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.EditStoragePage.xaml
+build_metadata.AdditionalFiles.TargetPath = EditStoragePage.xaml
+build_metadata.AdditionalFiles.RelativePath = EditStoragePage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/ScanDonePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.ScanDonePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ScanDonePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ScanDonePage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/ScanProductsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.ScanProductsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ScanProductsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ScanProductsPage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/StartPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.StartPage.xaml
+build_metadata.AdditionalFiles.TargetPath = StartPage.xaml
+build_metadata.AdditionalFiles.RelativePath = StartPage.xaml
+
+[C:/Schule/Schule5/SYP/blindspot/front-end/MyBlindSpot/MyBlindSpot/StoragePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.StoragePage.xaml
+build_metadata.AdditionalFiles.TargetPath = StoragePage.xaml
+build_metadata.AdditionalFiles.RelativePath = StoragePage.xaml

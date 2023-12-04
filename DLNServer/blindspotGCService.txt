@@ -1,0 +1,3 @@
+gcloud builds submit --tag gcr.io/blindspot-406600/predict
+gcloud run deploy --image gcr.io/blindspot-406600/predict --platform managed
+gcloud run services update foodprediction --platform managed --min-instances=99999
