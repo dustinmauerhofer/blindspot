@@ -368,7 +368,11 @@
 -keep class androidx.media.** implements android.os.Parcelable {
     public static final android.os.Parcelable$Creator *;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/154/jl/proguard.txt
+=======
+<<<<<<<< HEAD:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/154/jl/proguard.txt
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
 -keep class * implements androidx.versionedparcelable.VersionedParcelable
 -keep public class android.support.**Parcelizer { *; }
 -keep public class androidx.**Parcelizer { *; }
@@ -473,8 +477,13 @@
     <init>(android.app.Application,androidx.lifecycle.SavedStateHandle);
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> e575c27937e6c24df159749a0894afda2aafcee3:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/171/jl/proguard.txt
+=======
+========
+>>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/171/jl/proguard.txt
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
 # Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -489,7 +498,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+<<<<<<< HEAD
 <<<<<<< HEAD:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/154/jl/proguard.txt
+=======
+<<<<<<<< HEAD:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/154/jl/proguard.txt
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
 # The default FragmentFactory creates Fragment instances using reflection
 -if public class ** extends androidx.fragment.app.Fragment
 -keepclasseswithmembers,allowobfuscation public class <1> {
@@ -847,8 +860,15 @@
   <methods>;
 }
 
+<<<<<<< HEAD
 =======
 # This is necessary for default initialization using Camera2Config
 -keep public class androidx.camera.camera2.Camera2Config$DefaultProvider { *; }
 >>>>>>> e575c27937e6c24df159749a0894afda2aafcee3:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/171/jl/proguard.txt
+=======
+========
+# This is necessary for default initialization using Camera2Config
+-keep public class androidx.camera.camera2.Camera2Config$DefaultProvider { *; }
+>>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3:maui/BlindSpot/BlindSpot/obj/Debug/net7.0-android/lp/171/jl/proguard.txt
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
 

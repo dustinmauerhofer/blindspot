@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 <resources><string name="maui_empty_unused" /></resources>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+</resources>
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
