@@ -4,9 +4,86 @@
              x:Class="MyBlindSpot.AddItemPage"
              Title="AddItemPage">
     <VerticalStackLayout>
+    
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="ADD YOUR ITEM" 
+            HorizontalOptions="Center"
+            Padding="0,5,0,15"
+            FontSize="45"
+            TextColor="#42BBFF" 
+            FontFamily="BlackItalic"/>
+       <Grid>
+           <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="*"/>
+               <ColumnDefinition Width="*"/>
+           </Grid.ColumnDefinitions>
+
+           <Grid.RowDefinitions>
+               <RowDefinition Height="*"/>
+               <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+
+           <Border Grid.Column="0" 
+                   HeightRequest="200"
+                   StrokeThickness="0">
+
+               <StackLayout Padding="0,10,0,10">
+                   <Image Source="fridge.png" HeightRequest="100"/>
+                   <Label 
+            Text="FRIDGE"
+            FontSize="25"
+            HorizontalOptions="Center"
+            TextColor="Black"
+            FontFamily="BlackItalic"/>
+                   <Button Text="ADD" 
+                           Margin="20,10,20,0"
+                           FontFamily="BlackItalic"
+                           BackgroundColor="#CCCCCC"
+                           TextColor="Black"
+                           FontSize="22"
+                           Clicked="ItemAdded_Click"
+                           />
+               </StackLayout>
+           </Border>
+
+           <Border Grid.Column="1" 
+   HeightRequest="200"
+   StrokeThickness="0">
+
+               <StackLayout Padding="0,10,0,10">
+                   <Image Source="fridge.png" HeightRequest="100"/>
+                   <Label 
+                        Text="FRIDGE"
+                        FontSize="25"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                        FontFamily="BlackItalic"/>
+                   <Button Text="ADD" 
+                           Margin="20,10,20,0"
+                           FontFamily="BlackItalic"
+                           BackgroundColor="#CCCCCC"
+                           TextColor="Black"
+                           FontSize="22"
+                           Clicked="ItemAdded_Click"/>
+               </StackLayout>
+           </Border>
+
+       </Grid>
+       <VerticalStackLayout Padding="0,390,0,0">
+           <Line Stroke="Black" X2="1000"/>
+
+           <Button     
+               Text="TAKE ME BACK"
+                  FontSize="40"
+               HorizontalOptions="Center"
+               TextColor="Black"
+               FontFamily="BlackItalic"
+               BackgroundColor="Transparent"
+               Margin="4"
+               Clicked="Back_Click"/>
+           
+       </VerticalStackLayout>
+
+
     </VerticalStackLayout>
 </ContentPage>

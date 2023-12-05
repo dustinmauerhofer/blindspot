@@ -5,8 +5,17 @@
              Title="EditStoragePage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="EXAMPLE: (DRAWER)"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            FontSize="24"/>
+
+        <Button Text="Add New" Clicked="Camera_Click" Margin="10"/>
+
+        <Button Text="Delete" Clicked="DeleteItem_Click" Margin="10"/>
+        
+        <Button Text="Back" Clicked="Back_Click" Margin="10"/>
+        
+
     </VerticalStackLayout>
 </ContentPage>

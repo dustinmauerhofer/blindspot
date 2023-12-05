@@ -5,8 +5,11 @@
              Title="BlindMenuPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="BLIND MENU PAGE"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            FontSize="24"/>
+
+        <Button Text="Back to Main" Clicked="Button_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

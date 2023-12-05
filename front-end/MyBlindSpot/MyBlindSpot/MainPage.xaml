@@ -11,39 +11,64 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <!--MAIN PAGE-->
+
+            <Button BackgroundColor="#42BBFF" Clicked="Button_Clicked" Text="VISUALLY IMPAIRED"/>
+            <Button BackgroundColor="#42BBFF" Clicked="Button_Clicked_1" Text="ASSISTANT"/>
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                 Source="mylogo.png"
+                 WidthRequest="270"
+                 Margin="10"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <Border HeightRequest="390" 
+                 StrokeThickness="6"
+                 Stroke="Black"
+                 StrokeShape="RoundRectangle 40"
+                 Padding="0,30"
+                 BackgroundColor="#42BBFF"> 
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                <StackLayout VerticalOptions="Center" Spacing="30">
 
+                    <Image 
+                         Source="glasses.png" 
+                         HeightRequest="60"/>
 
-            <Frame>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer
-                         Command= "{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewmodel}}, Path=TapCommand}"
-                         CommandParameter="{Binding .}"/>
-                </Frame.GestureRecognizers>
+                    <Label 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         FontSize="24"
+                         TextColor="White"
+                         FontFamily="BlackItalic">
+                        <Label.Text>
+                            VISUALLY IMPAIRED
+                        </Label.Text>
 
-                <Label
-                    x:Name="CounterBtn"
-                    Text="Click me"
-                    HorizontalOptions="Center" 
-                    />   
-            </Frame>
+                    </Label>
+
+                </StackLayout>
+            </Border>
+
+            <Border  HeightRequest="240" 
+                     StrokeThickness="6"
+                     Stroke="Black"
+                     StrokeShape="RoundRectangle 40">
+
+                <StackLayout VerticalOptions="Center" Spacing="10">
+
+                    <Image 
+                         Source="shake.png" 
+                         HeightRequest="90"/>
+                    <Label 
+                          HorizontalOptions="Center" 
+                          VerticalOptions="Center"
+                          FontSize="24"
+                          Text="ASSISTANT"
+                          TextColor="#42BBFF"
+                         FontFamily="BlackItalic">
+                    </Label>
+
+                </StackLayout>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 

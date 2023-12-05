@@ -26910,9 +26910,13 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
+<<<<<<< HEAD
+      "Microsoft.Maui.Graphics >= 7.0.81"
+=======
       "Microsoft.Maui.Graphics >= 7.0.81",
       "ZXing.Net.Maui >= 0.4.0",
       "ZXing.Net.Maui.Controls >= 0.4.0"
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
     ],
     "net7.0-maccatalyst16.1": [
       "Camera.MAUI >= 1.4.4",
@@ -26921,9 +26925,13 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
+<<<<<<< HEAD
+      "Microsoft.Maui.Graphics >= 7.0.81"
+=======
       "Microsoft.Maui.Graphics >= 7.0.81",
       "ZXing.Net.Maui >= 0.4.0",
       "ZXing.Net.Maui.Controls >= 0.4.0"
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
     ],
     "net7.0-windows10.0.19041": [
       "Camera.MAUI >= 1.4.4",
@@ -26935,9 +26943,13 @@
       "Microsoft.Maui.Graphics >= 7.0.81",
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.81",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
+<<<<<<< HEAD
+      "Microsoft.WindowsAppSDK >= 1.2.221209.1"
+=======
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
       "ZXing.Net.Maui >= 0.4.0",
       "ZXing.Net.Maui.Controls >= 0.4.0"
+>>>>>>> e575c27937e6c24df159749a0894afda2aafcee3
     ]
   },
   "packageFolders": {

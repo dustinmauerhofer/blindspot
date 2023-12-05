@@ -5,8 +5,15 @@
              Title="ScanDonePage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="YOUR PHOTO"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="10"/>
+
+        <Button Text="Save in Storage" Clicked="SaveNewItem_Click" Margin="10"/>
+        <Button Text="RETAKE" Clicked="Retake_Click" Margin="10"/>
+        
+        
+        
     </VerticalStackLayout>
 </ContentPage>

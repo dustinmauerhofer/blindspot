@@ -50,6 +50,9 @@
     <MauiXaml Update="StoragePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="TempCamera.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
   </ItemGroup>
   <ItemGroup>
     <None Update="Platforms\Windows\Package.appxmanifest">

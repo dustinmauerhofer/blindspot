@@ -5,8 +5,24 @@
              Title="StartPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="OVERVIEW PAGE OF ASSISTANT!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="24"/>
+
+        <Button
+            Text="Back"
+            Clicked="Button_Clicked"
+            Margin="10"/>
+
+        <Button
+            Text="Your Storages"
+            Clicked="YourStorages_Click"
+            Margin="10"/>  
+
+        <Button
+            Text="Camera"
+            Clicked="Camera_Click"
+            Margin="10"/>
     </VerticalStackLayout>
 </ContentPage>
