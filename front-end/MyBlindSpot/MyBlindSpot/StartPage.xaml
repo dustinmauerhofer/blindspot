@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyBlindSpot.StartPage"
+             Title="StartPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="OVERVIEW PAGE OF ASSISTANT!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="24"/>
+
+        <Button
+            Text="Back"
+            Clicked="Button_Clicked"
+            Margin="10"/>
+
+        <Button
+            Text="Your Storages"
+            Clicked="YourStorages_Click"
+            Margin="10"/>  
+
+        <Button
+            Text="Camera"
+            Clicked="Camera_Click"
+            Margin="10"/>
+    </VerticalStackLayout>
+</ContentPage>

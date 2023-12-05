@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyBlindSpot.TempCamera"
+             Title="TempCamera">
+    <VerticalStackLayout>
+        <Label 
+            Text="CAMERA"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"/>
+
+        <Button Text="Scan Done" Clicked="ScanDone_Click" Margin="10"/>
+        <Button Text="Back" Clicked="Back_Click" Margin="10"/>
+    </VerticalStackLayout>
+</ContentPage>

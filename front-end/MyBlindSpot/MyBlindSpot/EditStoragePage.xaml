@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyBlindSpot.EditStoragePage"
+             Title="EditStoragePage">
+    <VerticalStackLayout>
+        <Label 
+            Text="EXAMPLE: (DRAWER)"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"/>
+
+        <Button Text="Add New" Clicked="Camera_Click" Margin="10"/>
+
+        <Button Text="Delete" Clicked="DeleteItem_Click" Margin="10"/>
+        
+        <Button Text="Back" Clicked="Back_Click" Margin="10"/>
+        
+
+    </VerticalStackLayout>
+</ContentPage>
