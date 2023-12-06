@@ -9,6 +9,7 @@ public partial class TempCamera : ContentPage
 
     private void ScanDone_Click(object sender, EventArgs e)
     {
+
         Navigation.PushAsync(new ScanDonePage());
     }
 

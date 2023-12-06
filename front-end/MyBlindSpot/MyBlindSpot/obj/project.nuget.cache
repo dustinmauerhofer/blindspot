@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ds/mCrAn5KigaKv3OmoWiHsG2ig8bLgG4Z6CRnlHSLSefyhbh2PyHbZBlu/EKi0qWKwOAjLrL6JibBccqjxAEw==",
+  "dgSpecHash": "4UrCm3JuwBRNLAuOiCzbpVOKmfboGFlYqtuCH7HP+NeskOVfr0hLSMfWHQ5AAk/gdkiLhsNN1L5iOUX5qyqG+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eghar\\Desktop\\DIPLOMARBEIT\\Programs\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
+  "projectFilePath": "C:\\Users\\eghar\\Documents\\GitHub\\blindspot\\front-end\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eghar\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\eghar\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",

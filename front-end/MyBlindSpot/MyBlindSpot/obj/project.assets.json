@@ -24575,11 +24575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eghar\\Desktop\\DIPLOMARBEIT\\Programs\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
+      "projectUniqueName": "C:\\Users\\eghar\\Documents\\GitHub\\blindspot\\front-end\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
       "projectName": "MyBlindSpot",
-      "projectPath": "C:\\Users\\eghar\\Desktop\\DIPLOMARBEIT\\Programs\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
+      "projectPath": "C:\\Users\\eghar\\Documents\\GitHub\\blindspot\\front-end\\MyBlindSpot\\MyBlindSpot\\MyBlindSpot.csproj",
       "packagesPath": "C:\\Users\\eghar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eghar\\Desktop\\DIPLOMARBEIT\\Programs\\MyBlindSpot\\MyBlindSpot\\obj\\",
+      "outputPath": "C:\\Users\\eghar\\Documents\\GitHub\\blindspot\\front-end\\MyBlindSpot\\MyBlindSpot\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

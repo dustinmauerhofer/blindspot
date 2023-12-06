@@ -13,14 +13,61 @@
 
             <!--MAIN PAGE-->
 
-            <Button BackgroundColor="#42BBFF" Clicked="Button_Clicked" Text="VISUALLY IMPAIRED"/>
-            <Button BackgroundColor="#42BBFF" Clicked="Button_Clicked_1" Text="ASSISTANT"/>
             <Image
                  Source="mylogo.png"
                  WidthRequest="270"
                  Margin="10"/>
 
-            <Border HeightRequest="390" 
+            <Frame BackgroundColor="Transparent" 
+                    HeightRequest="450" 
+                    Padding="0,30"
+                    BorderColor="Transparent"
+                    Margin="0,-50">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Tapped_Blind"/>
+                </Frame.GestureRecognizers>
+
+                <Border StrokeThickness="6" Stroke="Black" StrokeShape="RoundRectangle 40" BackgroundColor="#42BBFF">
+
+                    <StackLayout VerticalOptions="Center" Spacing="30">
+
+                        <Image Source="glasses.png" HeightRequest="60"/>
+
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="24" TextColor="White" FontFamily="BlackItalic">
+                            <Label.Text>
+                                VISUALLY IMPAIRED
+                            </Label.Text>
+                        </Label>
+
+                    </StackLayout>
+
+                </Border>
+            </Frame>
+
+            <Frame BackgroundColor="Transparent" 
+        HeightRequest="240"
+        BorderColor="Transparent"
+        Margin="-20, 0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Tapped_Assistant"/>
+                </Frame.GestureRecognizers>
+
+                <Border StrokeThickness="6" 
+             Stroke="Black" 
+             StrokeShape="RoundRectangle 40">
+
+                    <StackLayout VerticalOptions="Center" Spacing="10">
+
+                        <Image Source="shake.png" HeightRequest="90"/>
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="24" Text="ASSISTANT" TextColor="#42BBFF" FontFamily="BlackItalic">
+                        </Label>
+
+                    </StackLayout>
+
+                </Border>
+            </Frame>
+
+            <!--<Border HeightRequest="390" 
                  StrokeThickness="6"
                  Stroke="Black"
                  StrokeShape="RoundRectangle 40"
@@ -68,7 +115,9 @@
                     </Label>
 
                 </StackLayout>
-            </Border>
+            </Border>-->
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 

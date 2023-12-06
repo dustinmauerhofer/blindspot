@@ -29,5 +29,6 @@ public partial class StartPage : ContentPage
     private void Camera_Click(object sender, EventArgs e)
     {
         // CAM NAVIGATION
+        Navigation.PushAsync(new TempCamera());
     }
 }
