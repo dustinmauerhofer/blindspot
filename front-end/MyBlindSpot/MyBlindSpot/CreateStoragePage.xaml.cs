@@ -18,6 +18,6 @@ public partial class CreateStoragePage : ContentPage
     private void StorageDone_Clicked(object sender, EventArgs e)
     {
         // Add Storage to Database Logic
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new ChoosePlace());
     }
 }

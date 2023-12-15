@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyBlindSpot.ChoosePlace"
+             Title="ChoosePlace">
+    <VerticalStackLayout>
+        <Label 
+             Text="ADD ITEM: Choose the place you want to put the item in!"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" />
+
+        <Label Text="1" FontSize="30"/>
+
+        <Button Text="Continue" Clicked="ContinueToSpace_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

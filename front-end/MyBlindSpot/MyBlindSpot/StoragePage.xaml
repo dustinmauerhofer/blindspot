@@ -111,7 +111,7 @@
 
         <VerticalStackLayout Padding="0,210,0,0">
 
-            <Button Text="ADD TO YOUR STORAGE" 
+            <Button Text="CREATE A NEW STORAGE" 
                 BackgroundColor="#42BBFF"
                 Margin="30,15,30,20"
                 Clicked="AddNewStorage_Clicked"
