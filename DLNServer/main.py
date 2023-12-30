@@ -17,13 +17,12 @@ class_labels = ["apple", "blueberry", "milk", "orange", "pear"]
 
 @app.route('/predict', methods=['GET','POST'])
 def predict():
-   if request.method == 'POST':
-       file = request.files.get('file')
-       if file is None or file.filename == "":
-           return jsonify({"error": "no file"})
-
        try:
-            image_bytes = file.read()
+            image_bytes = request.get_data()
+
+            if not image_bytes:
+                return jsonify({"error": "no data"})
+
             pillow_img = Image.open(io.BytesIO(image_bytes)).convert('L')
 
             # Read and preprocess the image
@@ -40,7 +39,6 @@ def predict():
             return jsonify({'predicted_label': predicted_label})
        except Exception as e:
             return jsonify({'error': 'An error occurred: {}'.format(str(e))})
-   return "OK"
 
 if __name__ == '__main__':
     app.run(debug=True)

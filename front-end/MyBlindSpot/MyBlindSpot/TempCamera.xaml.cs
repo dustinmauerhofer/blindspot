@@ -1,5 +1,4 @@
 using Camera.MAUI;
-using MyBlindSpot.Classes;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
