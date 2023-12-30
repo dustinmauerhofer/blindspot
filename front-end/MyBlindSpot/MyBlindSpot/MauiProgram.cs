@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Camera.MAUI;
+using Microsoft.Extensions.Logging;
 using MyBlindSpot.ViewModel;
+using ZXing.Net.Maui.Controls;
 
 namespace MyBlindSpot
 {
@@ -10,11 +12,15 @@ namespace MyBlindSpot
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseBarcodeReader()
+                .UseMauiCameraView()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+           
 
 
             builder.Services.AddSingleton<MainPage>();
@@ -46,5 +52,6 @@ namespace MyBlindSpot
 
             return builder.Build();
         }
+
     }
 }

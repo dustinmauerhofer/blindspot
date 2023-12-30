@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.TempCamera"
-             Title="TempCamera">
+             Title="TempCamera"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
+
     <VerticalStackLayout>
         <Label 
             Text="CAMERA"
@@ -12,5 +15,43 @@
 
         <Button Text="Scan Done" Clicked="ScanDone_Click" Margin="10"/>
         <Button Text="Back" Clicked="Back_Click" Margin="10"/>
+
+
+        <!-- dustin code start-->
+
+        <!---   
+        
+        <zxing:CameraBarcodeReaderView x:Name="barcodeReader"
+                               WidthRequest="300"
+                               HeightRequest="300"
+                               IsDetecting="True" 
+                               IsTorchOn="False" 
+                               BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected" />
+        
+        
+        -->
+                
+
+
+        <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300"
+                           CamerasLoaded="cameraView_CamerasLoaded"/>
+        
+        <Button Text="TakePhoto" Clicked="TakePhoto_Clicked"/>
+
+        <Image x:Name="TakenImage" WidthRequest="200" HeightRequest="200"/>
+
+
+
+
+        <Label
+                x:Name="barcodeResult"
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+        <Label x:Name="outputLabel" Text="Hallo"/>
+
+
     </VerticalStackLayout>
 </ContentPage>
