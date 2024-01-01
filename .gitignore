@@ -394,6 +394,7 @@ net-7.0/Android/Resources/
 net-7.0/Android/Assets/
 net-7.0/Android/obj/
 net-7.0/Android/bin/
+net7.0-android
 
 # Ignore R.java, R$*.class, and other auto-generated resource files
 **/R.java
