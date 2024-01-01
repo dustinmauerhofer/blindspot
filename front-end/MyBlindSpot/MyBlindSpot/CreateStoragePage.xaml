@@ -78,21 +78,21 @@
           VerticalOptions="End"
               Margin="0,0,0,10"/>-->
 
-            <Button Text="ADD TO YOUR STORAGE" 
+            <Button Text="ADD TO YOUR STORAGES" 
                     BackgroundColor="#42BBFF"
-                    Margin="30,15,30,0"
+                    Margin="30,15,30,35"
                     Clicked="StorageDone_Clicked"
                     FontSize="20"/>
 
 
-            <Label  
+            <!--<Label  
             HorizontalOptions="Center" 
             VerticalOptions="Center"
             FontSize="24"
             Text="ADD TO YOUR STORAGE"
             TextColor="White"
            FontFamily="BlackItalic">
-            </Label>
+            </Label>-->
 
 
             <Line Stroke="Black" X2="1000"/>

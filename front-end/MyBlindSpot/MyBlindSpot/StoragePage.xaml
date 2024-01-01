@@ -76,7 +76,7 @@
                     HorizontalOptions="Center"
                     TextColor="Black"
                     FontFamily="BlackItalic"/>
-                    </StackLayout>
+                        </StackLayout>
                 </Border>
 
                 <Border Grid.Row="1" Grid.Column="0" HeightRequest="150" StrokeThickness="0">

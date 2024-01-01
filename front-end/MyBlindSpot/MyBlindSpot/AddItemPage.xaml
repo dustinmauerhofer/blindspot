@@ -42,6 +42,7 @@
                            TextColor="Black"
                            FontSize="22"
                            Clicked="ItemAdded_Click"
+                           
                            />
                </StackLayout>
            </Border>

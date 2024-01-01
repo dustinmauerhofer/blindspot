@@ -22,6 +22,6 @@ public partial class AddItemPage : ContentPage
 
     private void ItemAdded_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new ChoosePlace());
     }
 }

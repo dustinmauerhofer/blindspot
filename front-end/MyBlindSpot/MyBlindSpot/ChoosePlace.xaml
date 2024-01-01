@@ -3,14 +3,110 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.ChoosePlace"
              Title="ChoosePlace">
-    <VerticalStackLayout>
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout>
+
         <Label 
-             Text="ADD ITEM: Choose the place you want to put the item in!"
-             VerticalOptions="Center" 
-             HorizontalOptions="Center" />
+            Text="ADD ITEM" 
+            HorizontalTextAlignment="Center"
+            FontSize="35"
+            TextColor="#42BBFF"
+            FontFamily="BlackItalic"
+            Margin="0,5"/>
 
-        <Label Text="1" FontSize="30"/>
+        <Label 
+            Text="CHOOSE THE PLACE YOU WANT TO PUT THE ITEM IN" 
+            HorizontalTextAlignment="Center"
+            FontSize="22"
+            Margin="40,10"
+            FontFamily="BlackItalic"/>
 
-        <Button Text="Continue" Clicked="ContinueToSpace_Clicked"/>
+        <Label 
+            BackgroundColor="#42BBFF"
+            Margin="20,10"
+            WidthRequest="150"
+            HeightRequest="80"/>
+
+        <Label 
+           BackgroundColor="Gray"
+           Margin="20,10"
+           WidthRequest="150"
+           HeightRequest="80"/>
+            
+
+        <Label 
+            BackgroundColor="Gray"
+           Margin="20,10"
+           WidthRequest="150"
+           HeightRequest="80"/>
+
+        <Label 
+            BackgroundColor="Gray"
+            Margin="20,10"
+            WidthRequest="150"
+            HeightRequest="80"/>
+                
+                
+        
+        <!--<Button Text="CONTINUE" 
+         BackgroundColor="#42BBFF"
+         Margin="30,20,30,20"
+         Clicked="ContinueToSpace_Clicked"
+         FontSize="20"/>-->
+
+       
     </VerticalStackLayout>
+            </ScrollView>
+                <FlexLayout Direction="Column">
+            <Button 
+                Text="Continue"
+                WidthRequest="300"
+                HeightRequest="70"
+                FontSize="30"
+                Margin="80,280,140,20"
+                BackgroundColor="#42BBFF"
+                Clicked="ContinueToSpace_Clicked"/>
+        </FlexLayout>
+        
+        
+        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
+
+            <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
+
+            <Grid FlexLayout.Grow="1" Margin="0,-610">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="back.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Back_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="drawer.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Storage_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="camera.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Camera_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+            </Grid>
+        </FlexLayout>
+        
+        
+    </Grid>
 </ContentPage>
