@@ -30,8 +30,8 @@
         
         
         -->
-                
 
+        <Label x:Name="outputLabel" Text="Hallo"/>
 
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300"
                            CamerasLoaded="cameraView_CamerasLoaded"/>
@@ -40,7 +40,7 @@
 
         <Image x:Name="TakenImage" WidthRequest="200" HeightRequest="200"/>
 
-
+       
 
 
         <Label
@@ -50,7 +50,7 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-        <Label x:Name="outputLabel" Text="Hallo"/>
+        
 
 
     </VerticalStackLayout>
