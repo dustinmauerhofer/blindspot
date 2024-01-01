@@ -376,3 +376,31 @@ Directory.Build.Override.props
 
 # Only the "snapshots" directory should be added to Git, not the "snapshots-diff" directory
 snapshots-diff/
+
+
+# Ignore net-7.0 Android build artifacts
+net-7.0/Android/bin/
+net-7.0/Android/obj/
+
+# Ignore DLL, PDB, DEX, ZIP, and Resource.Designer.cs files
+*.dll
+*.pdb
+*.dex
+*.zip
+**/Resource.Designer.cs
+
+# Ignore Android generated files
+net-7.0/Android/Resources/
+net-7.0/Android/Assets/
+net-7.0/Android/obj/
+net-7.0/Android/bin/
+
+# Ignore R.java, R$*.class, and other auto-generated resource files
+**/R.java
+**/R$*.class
+**/R.class
+**/R$*.java
+
+# Ignore classes.dex and classes2.dex
+**/classes.dex
+**/classes2.dex
