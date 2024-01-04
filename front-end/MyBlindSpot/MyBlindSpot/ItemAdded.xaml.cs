@@ -6,9 +6,8 @@ public partial class ItemAdded : ContentPage
 	{
 		InitializeComponent();
 	}
-
     private void BackToYourStroages_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage());
     }
 }

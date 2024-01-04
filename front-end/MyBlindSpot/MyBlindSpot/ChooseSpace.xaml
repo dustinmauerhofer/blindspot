@@ -3,14 +3,160 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.ChooseSpace"
              Title="ChooseSpace">
-    <VerticalStackLayout>
-        <Label
-             Text="ADD ITEM: How much space does the item need"
-             VerticalOptions="Center" 
-             HorizontalOptions="Center" />
+    <Grid>
+        <VerticalStackLayout>
+            <Label 
+              Text="ADD ITEM" 
+              HorizontalTextAlignment="Center"
+              FontSize="35"
+              TextColor="#42BBFF"
+              FontFamily="BlackItalic"
+              Margin="0,30"/>
 
-        <Label Text="2" FontSize="30"/>
+            <Label 
+              Text="HOW MUCH SPACE DOES THE ITEM NEED?" 
+              HorizontalTextAlignment="Center"
+              FontSize="22"
+              Margin="40,0"
+              FontFamily="BlackItalic"/>
 
-        <Button Text="Continue" Clicked="ContinueToFrontBack_Clicked"/>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+
+        <Grid HorizontalOptions="Center">
+            <HorizontalStackLayout>
+
+                <Frame BackgroundColor="Transparent" 
+                 HeightRequest="280"
+                 WidthRequest="150"
+                 BorderColor="Transparent"
+                    Margin="-30">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                        <!--Tapped="Tapped_Left" - EINBAUEN FÜR COLORSWITCH-->
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3" 
+                      Stroke="Black"
+                      BackgroundColor="#42BBFF">
+
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+
+                    </Border>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                    HeightRequest="280"
+                     WidthRequest="150"
+                    BorderColor="Transparent"
+                    Margin="-20">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                        <!--Tapped="Tapped_Left" - EINBAUEN FÜR COLORSWITCH-->
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3" 
+                          Stroke="Black"
+                          BackgroundColor="#42BBFF">
+
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+
+                    </Border>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                     HeightRequest="280"
+                     WidthRequest="150"
+                     BorderColor="Transparent"
+                    Margin="-30">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                        <!--Tapped="Tapped_Left" - EINBAUEN FÜR COLORSWITCH-->
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3" 
+                         Stroke="Black"
+                         BackgroundColor="#42BBFF">
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+                    </Border>
+                </Frame>
+
+
+                <!--<Label 
+              BackgroundColor="Gray"
+              WidthRequest="80"
+              HeightRequest="200"
+              Text="+"
+              FontSize="50"
+              VerticalTextAlignment="Center"
+              HorizontalTextAlignment="Center"/>
+         
+             <Label 
+              BackgroundColor="#42BBFF"
+              WidthRequest="80"
+              HeightRequest="200"
+              Text="+"
+              FontSize="50"
+              VerticalTextAlignment="Center"
+              HorizontalTextAlignment="Center"/>-->
+            </HorizontalStackLayout>
+        </Grid>
+
+        <FlexLayout Direction="Column">
+            <Button     
+             Text="Continue"
+             WidthRequest="300"
+             HeightRequest="70"
+             FontSize="30"
+             Margin="80,280,140,20" 
+             BackgroundColor="#42BBFF"
+             Clicked="ContinueToFrontBack_Clicked"/>
+        </FlexLayout>
+
+        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
+
+            <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
+
+            <Grid FlexLayout.Grow="1" Margin="0,-610">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="back.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Back_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="drawer.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Storage_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="camera.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Camera_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+            </Grid>
+
+        </FlexLayout>
+    </Grid>
 </ContentPage>
