@@ -14,6 +14,13 @@ public partial class AddItemPage : ContentPage
         var loadedStorages = APICalls.LoadStorages();
 
         SetGridLayout(loadedStorages.Count());
+
+        //only for testing purpse
+        if(loadedStorages.Count() == 0)
+            loadedStorages.Add(new Storage("",10, 10));
+        //
+
+
         foreach (var storage in loadedStorages)
         {
             Border loadedLabel = new Border
