@@ -3,12 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.ItemAdded"
              Title="ItemAdded">
-    <VerticalStackLayout>
-        <Label 
-            Text="ITEM ADDED: The item is added in your storage [storage name]"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <Grid>
+        <VerticalStackLayout>
+            <Label 
+           Text="ADD ITEM" 
+           HorizontalTextAlignment="Center"
+           FontSize="35"
+           TextColor="#42BBFF"
+           FontFamily="BlackItalic"
+           Margin="0,5"/>
 
-        <Button Text="Continue" Clicked="BackToYourStroages_Clicked"/>
-    </VerticalStackLayout>
+            <Label 
+           Text="THE ITEM IS ADDED IN YOUR STORAGE" 
+           HorizontalTextAlignment="Center"
+           FontSize="22"
+           Margin="40,10"
+           FontFamily="BlackItalic"/>
+
+            <Image Source="check.png" WidthRequest="150" VerticalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <FlexLayout Direction="Column">
+            <Button 
+                Text="Continue"
+                WidthRequest="300"
+                HeightRequest="70"
+                FontSize="30"
+                Margin="80,280,140,150"
+                BackgroundColor="#42BBFF"
+                Clicked="BackToYourStroages_Clicked"/>
+        </FlexLayout>
+    </Grid>
 </ContentPage>
