@@ -6,17 +6,19 @@ namespace MyBlindSpot;
 public partial class ChooseSpace : ContentPage
 {
     StorageInformation storageInformation;
+    StorageField storageField;
     List<int> space = new List<int>();
-    public ChooseSpace(StorageInformation si)
+    public ChooseSpace(StorageInformation si,StorageField sf)
     {
         InitializeComponent();
         storageInformation = si;
+        storageField = sf;
     }
 
     private async void ContinueToFrontBack_Clicked(object sender, EventArgs e)
     {
         storageInformation.Space = space;
-        Navigation.PushAsync(new ChooseFrontBack(storageInformation));
+        Navigation.PushAsync(new ChooseFrontBack(storageInformation,storageField));
     }
 
     private void Camera_Tapped(object sender, TappedEventArgs e)
@@ -31,7 +33,7 @@ public partial class ChooseSpace : ContentPage
 
     private void Back_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new ChoosePlace(storageInformation));
+        Navigation.PushAsync(new ChoosePlace(storageInformation,storageField));
     }
 
     private void Tapped_Left(object sender, EventArgs e)

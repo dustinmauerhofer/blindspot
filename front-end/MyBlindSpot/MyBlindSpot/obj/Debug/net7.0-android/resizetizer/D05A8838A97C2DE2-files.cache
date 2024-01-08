@@ -1,5 +1,8 @@
 ﻿obj\Debug\net7.0-android\resizetizer\r\drawable\back.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\boxback.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\boxfront.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\camera.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\drawer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\fridge.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\glasses.png

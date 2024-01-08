@@ -5,10 +5,12 @@ namespace MyBlindSpot;
 public partial class ChooseFrontBack : ContentPage
 {
     StorageInformation storageInformation;
-	public ChooseFrontBack(StorageInformation si)
+    StorageField storageField;
+	public ChooseFrontBack(StorageInformation si,StorageField sf)
 	{
 		InitializeComponent();
         storageInformation = si;
+        storageField = sf;
 	}
 
     private void ContinueToItemAdded_Clicked_Front(object sender, EventArgs e)
@@ -35,7 +37,7 @@ public partial class ChooseFrontBack : ContentPage
 
     private void Back_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new ChooseSpace(new StorageInformation()));
+        Navigation.PushAsync(new ChooseSpace(storageInformation, storageField));
     }
 
 }

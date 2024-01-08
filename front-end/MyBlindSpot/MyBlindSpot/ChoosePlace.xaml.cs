@@ -120,7 +120,7 @@ public partial class ChoosePlace : ContentPage
     private void ContinueToSpace_Clicked(object sender, EventArgs e)
     {
         
-        Navigation.PushAsync(new ChooseSpace(storageInformation));
+        Navigation.PushAsync(new ChooseSpace(storageInformation,storageField));
     }
 
     private void Camera_Tapped(object sender, TappedEventArgs e)
