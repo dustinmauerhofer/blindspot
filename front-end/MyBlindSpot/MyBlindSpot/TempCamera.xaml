@@ -13,7 +13,7 @@
             HorizontalOptions="Center" 
             FontSize="24"/>
 
-        <Button Text="Scan Done" Clicked="ScanDone_Click" Margin="10"/>
+       
         <Button Text="Back" Clicked="Back_Click" Margin="10"/>
 
 
@@ -31,21 +31,14 @@
         
         -->
 
-        <Label x:Name="outputLabel" Text="Hallo"/>
-
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300"
                            CamerasLoaded="cameraView_CamerasLoaded"/>
         
         <Button Text="TakePhoto" Clicked="TakePhoto_Clicked"/>
 
-        <Image x:Name="TakenImage" WidthRequest="200" HeightRequest="200"/>
-
-       
-
-
+        <Button Text="Skip State for Test" Clicked="Skip_Clicked"></Button>
         <Label
                 x:Name="barcodeResult"
-                Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />

@@ -8,16 +8,21 @@ namespace MyBlindSpot.Classes
 {
     public class APICalls
     {
-        public static List<Storage> LoadStorages()
+        public static List<StorageField> LoadStorages()
         {
             //Funktion soll alle exsistierenden Storages eines Users über http pullen > diese in Storage objekte verwandeln und dann als gebündelte Liste returnen
-            return new List<Storage>();
+            return new List<StorageField>();
         }
 
-        public static Storage LoadSpecificStorage(int id)
+        public static StorageField LoadSpecificStorage(int id)
         {
             //diese Funktion soll einen Spezifischen Storage über http pullen und diesen als Storage object returnen
-            return new Storage("",5,5);
+            return new StorageField("",5,5);
+        }
+
+        public static void SaveStorage(int id, StorageField storageInformation)
+        {
+
         }
     }
 }

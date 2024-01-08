@@ -4,35 +4,7 @@
              x:Class="MyBlindSpot.StoragePage"
              Title="StoragePage">
     <VerticalStackLayout>
-        <!--<Label 
-            Text="YOUR STORAGES"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="24"/>
-
-        <Button Text="CREATE NEW STORAGE"
-                Clicked="AddNewStorage_Clicked"
-                Margin="10"/>
-
-        <Button
-            Text="Back"
-            Clicked="Button_Clicked"
-            Margin="10"/>
-
-        <Button
-            Text="Your Storages"
-            Clicked="YourStorages_Click"
-            Margin="10"/>
-
-        <Button
-            Text="Camera"
-            Clicked="Camera_Click"
-            Margin="10"/>
-
-        <Button
-             Text="STORAGE (Drawer)"
-             Clicked="SpecificStorage_Clicked"
-             Margin="10"/>-->
+       
         <Label 
         Text="YOUR STORAGES" 
         HorizontalOptions="Center"

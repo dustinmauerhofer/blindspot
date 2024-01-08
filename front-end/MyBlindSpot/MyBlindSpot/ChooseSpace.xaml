@@ -22,29 +22,78 @@
 
         </VerticalStackLayout>
 
-        
-        <Grid HorizontalOptions="Center" x:Name="storageGrid">
-            
+        <Grid HorizontalOptions="Center">
+            <HorizontalStackLayout>
+
+                <Frame BackgroundColor="Transparent"
+                    HeightRequest="280"
+                    WidthRequest="150"
+                    BorderColor="Transparent"
+                    Margin="-30">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tapped_Left" />
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3"
+                        Stroke="Black"
+                        BackgroundColor="#42BBFF">
+
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+
+                    </Border>
+                </Frame>
 
 
-                <!--<Label 
-              BackgroundColor="Gray"
-              WidthRequest="80"
-              HeightRequest="200"
-              Text="+"
-              FontSize="50"
-              VerticalTextAlignment="Center"
-              HorizontalTextAlignment="Center"/>
-         
-             <Label 
-              BackgroundColor="#42BBFF"
-              WidthRequest="80"
-              HeightRequest="200"
-              Text="+"
-              FontSize="50"
-              VerticalTextAlignment="Center"
-              HorizontalTextAlignment="Center"/>-->
-           
+                <Frame BackgroundColor="Transparent"
+                    HeightRequest="280"
+                    WidthRequest="150"
+                    BorderColor="Transparent"
+                    Margin="-30">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tapped_Mid" />
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3"
+                        Stroke="Black"
+                        BackgroundColor="#42BBFF">
+
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+
+                    </Border>
+                </Frame>
+
+
+                <Frame BackgroundColor="Transparent"
+                       HeightRequest="280"
+                        WidthRequest="150"
+                        BorderColor="Transparent"
+                        Margin="-30">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tapped_Right" />
+                    </Frame.GestureRecognizers>
+
+                    <Border StrokeThickness="3"
+                        Stroke="Black"
+                        BackgroundColor="#42BBFF">
+
+                        <StackLayout VerticalOptions="Center" Spacing="10">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" Text="+" TextColor="Black" FontFamily="BlackItalic">
+                            </Label>
+                        </StackLayout>
+
+                    </Border>
+                </Frame>
+
+
+
+
+            </HorizontalStackLayout>
         </Grid>
 
         <FlexLayout Direction="Column">

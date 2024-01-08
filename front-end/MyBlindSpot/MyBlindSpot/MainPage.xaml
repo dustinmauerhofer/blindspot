@@ -66,58 +66,6 @@
 
                 </Border>
             </Frame>
-
-            <!--<Border HeightRequest="390" 
-                 StrokeThickness="6"
-                 Stroke="Black"
-                 StrokeShape="RoundRectangle 40"
-                 Padding="0,30"
-                 BackgroundColor="#42BBFF"> 
-
-                <StackLayout VerticalOptions="Center" Spacing="30">
-
-                    <Image 
-                         Source="glasses.png" 
-                         HeightRequest="60"/>
-
-                    <Label 
-                         HorizontalOptions="Center" 
-                         VerticalOptions="Center"
-                         FontSize="24"
-                         TextColor="White"
-                         FontFamily="BlackItalic">
-                        <Label.Text>
-                            VISUALLY IMPAIRED
-                        </Label.Text>
-
-                    </Label>
-
-                </StackLayout>
-            </Border>
-
-            <Border  HeightRequest="240" 
-                     StrokeThickness="6"
-                     Stroke="Black"
-                     StrokeShape="RoundRectangle 40">
-
-                <StackLayout VerticalOptions="Center" Spacing="10">
-
-                    <Image 
-                         Source="shake.png" 
-                         HeightRequest="90"/>
-                    <Label 
-                          HorizontalOptions="Center" 
-                          VerticalOptions="Center"
-                          FontSize="24"
-                          Text="ASSISTANT"
-                          TextColor="#42BBFF"
-                         FontFamily="BlackItalic">
-                    </Label>
-
-                </StackLayout>
-            </Border>-->
-            
-            
         </VerticalStackLayout>
     </ScrollView>
 

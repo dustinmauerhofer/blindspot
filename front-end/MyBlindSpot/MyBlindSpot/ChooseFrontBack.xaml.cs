@@ -1,20 +1,26 @@
+using MyBlindSpot.Classes;
+
 namespace MyBlindSpot;
 
 public partial class ChooseFrontBack : ContentPage
 {
-	public ChooseFrontBack()
+    StorageInformation storageInformation;
+	public ChooseFrontBack(StorageInformation si)
 	{
 		InitializeComponent();
+        storageInformation = si;
 	}
 
     private void ContinueToItemAdded_Clicked_Front(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ItemAdded());
+        storageInformation.FrontBackAlignment = 0;
+        Navigation.PushAsync(new ItemAdded(storageInformation));
     }
 
     private void ContinueToItemAdded_Clicked_Back(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ItemAdded());
+        storageInformation.FrontBackAlignment = 1;
+        Navigation.PushAsync(new ItemAdded(storageInformation));
     }
 
     private void Camera_Tapped(object sender, TappedEventArgs e)
@@ -29,7 +35,7 @@ public partial class ChooseFrontBack : ContentPage
 
     private void Back_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new ChooseSpace());
+        Navigation.PushAsync(new ChooseSpace(new StorageInformation()));
     }
 
 }

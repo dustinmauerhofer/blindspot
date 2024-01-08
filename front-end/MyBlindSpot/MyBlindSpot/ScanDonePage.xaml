@@ -3,17 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.ScanDonePage"
              Title="ScanDonePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="YOUR PHOTO"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            Margin="10"/>
 
-        <Button Text="Save in Storage" Clicked="SaveNewItem_Click" Margin="10"/>
-        <Button Text="RETAKE" Clicked="Retake_Click" Margin="10"/>
-        
-        
-        
+    <VerticalStackLayout>
+        <Label Text="YOUR PHOTO"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="10" />
+
+        <Button Text="Save in Storage" Clicked="SaveNewItem_Click" Margin="10" />
+        <Button Text="RETAKE" Clicked="Retake_Click" Margin="10" />
+
+        <ContentView WidthRequest="500" HeightRequest="500">
+            <Image x:Name="picture"></Image>
+        </ContentView>
+        <Label x:Name="evaluation" FontSize="20" />
     </VerticalStackLayout>
+
 </ContentPage>

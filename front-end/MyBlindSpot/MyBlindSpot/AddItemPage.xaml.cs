@@ -7,17 +7,18 @@ namespace MyBlindSpot;
 
 public partial class AddItemPage : ContentPage
 {
-    public AddItemPage()
+    StorageInformation storageInformation;
+    public AddItemPage(StorageInformation st)
     {
         InitializeComponent();
-
+        storageInformation = st;
         var loadedStorages = APICalls.LoadStorages();
 
         SetGridLayout(loadedStorages.Count());
 
         //only for testing purpse
         if(loadedStorages.Count() == 0)
-            loadedStorages.Add(new Storage("",10, 10));
+            loadedStorages.Add(new StorageField("",10, 10));
         //
 
 
@@ -52,7 +53,7 @@ public partial class AddItemPage : ContentPage
                         BackgroundColor=Color.FromHex("#CCCCCC"),
                         TextColor=Colors.Black,
                         FontSize=22,
-                        Command = new Command(() => ItemAdded_Click(this,new EventArgs()))
+                        Command = new Command(() => SendItem(storage))
                     }
                 }
             };
@@ -60,6 +61,11 @@ public partial class AddItemPage : ContentPage
             mainGrid.Children.Add(loadedLabel);
         }
 
+    }
+
+    public void SendItem(StorageField sf)
+    {
+        Navigation.PushAsync(new ChoosePlace(storageInformation,sf));
     }
 
     private void SetGridLayout(int v)
@@ -91,10 +97,5 @@ public partial class AddItemPage : ContentPage
     private void Back_Click(object sender, EventArgs e)
     {
         Navigation.PopAsync();
-    }
-
-    private void ItemAdded_Click(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new ChoosePlace());
     }
 }

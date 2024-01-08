@@ -34,4 +34,7 @@
                 Clicked="BackToYourStroages_Clicked"/>
         </FlexLayout>
     </Grid>
+
+
+    <Label x:Name="output"></Label>
 </ContentPage>

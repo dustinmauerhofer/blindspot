@@ -22,38 +22,11 @@
          Margin="40,10"
          FontFamily="BlackItalic"/>
 
-                <Label 
-         BackgroundColor="#42BBFF"
-         Margin="20,10"
-         WidthRequest="150"
-         HeightRequest="80"/>
-
-                <Label 
-        BackgroundColor="Gray"
-        Margin="20,10"
-        WidthRequest="150"
-        HeightRequest="80"/>
-
-
-                <Label 
-         BackgroundColor="Gray"
-        Margin="20,10"
-        WidthRequest="150"
-        HeightRequest="80"/>
-
-                <Label 
-         BackgroundColor="Gray"
-         Margin="20,10"
-         WidthRequest="150"
-         HeightRequest="80"/>
+                <Grid x:Name="selectionGrid" HorizontalOptions="Center"></Grid>
 
 
 
-                <!--<Button Text="CONTINUE" 
-      BackgroundColor="#42BBFF"
-      Margin="30,20,30,20"
-      Clicked="ContinueToSpace_Clicked"
-      FontSize="20"/>-->
+      
 
 
             </VerticalStackLayout>
