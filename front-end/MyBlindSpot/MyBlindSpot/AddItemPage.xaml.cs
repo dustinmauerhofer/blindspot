@@ -88,12 +88,6 @@ public partial class AddItemPage : ContentPage
 
     }
 
-    public AddItemPage(AddItemVM vm)
-    {
-        InitializeComponent();
-        BindingContext = vm;
-    }
-
     private void Back_Click(object sender, EventArgs e)
     {
         Navigation.PopAsync();
