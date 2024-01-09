@@ -2119,6 +2119,7 @@ C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+<<<<<<< Updated upstream
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\build.props
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\adb.props
@@ -3199,3 +3200,8 @@ C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so
+=======
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\resizetizer\r\drawable\boxback.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\resizetizer\r\drawable\boxfront.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-android\resizetizer\r\drawable\check.png
+>>>>>>> Stashed changes
