@@ -40,4 +40,9 @@ public partial class StoragePage : ContentPage
     {
         Navigation.PushAsync(new EditStoragePage());
     }
+
+    private void ScanYourProducts_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ScanProductsPage());
+    }
 }

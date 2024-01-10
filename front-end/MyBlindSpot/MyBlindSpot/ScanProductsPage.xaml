@@ -60,7 +60,7 @@
                             Stroke="Transparent">
 
                             <StackLayout Margin="50,0,0,0">
-                                <Label Text="AI SCAN" HorizontalOptions="Center"/>
+                                <Label Text="AI SCAN" HorizontalOptions="Center" FontFamily="black-italic"/>
                                 <ImageButton Source="scanner" MaximumHeightRequest="72" MaximumWidthRequest="69"/>
                             </StackLayout>
                         </Border>
@@ -71,13 +71,13 @@
                            HorizontalOptions="End">
 
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="AiScanner_Tapped"/>
+                            <TapGestureRecognizer Tapped="BarcodeScanner_Tapped"/>
                         </Frame.GestureRecognizers>
                         <Border StrokeThickness="3"
                             Stroke="Transparent">
 
                             <StackLayout Margin="0,0,50,0">
-                                <Label Text="BARCODE SCAN" HorizontalOptions="Center"/>
+                                <Label Text="BARCODE SCAN" HorizontalOptions="Center" FontFamily="black-italic"/>
                                 <ImageButton Source="barcode" MaximumHeightRequest="72" MaximumWidthRequest="69"/>
                             </StackLayout>
                         </Border>

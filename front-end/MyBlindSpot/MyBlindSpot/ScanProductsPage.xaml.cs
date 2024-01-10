@@ -4,9 +4,19 @@ namespace MyBlindSpot;
 
 public partial class ScanProductsPage : ContentPage
 {
-	public ScanProductsPage(ScanProductsVM vm)
+	public ScanProductsPage()
 	{
 		InitializeComponent();
-		BindingContext = vm;
+		//BindingContext = vm;
 	}
+
+    private void AiScanner_Tapped(object sender, TappedEventArgs e)
+    {
+
+    }
+
+    private void BarcodeScanner_Tapped(object sender, TappedEventArgs e)
+    {
+
+    }
 }

@@ -126,7 +126,7 @@
             </Border>
 
             <Border Grid.Column="2" HeightRequest="50" WidthRequest="50"  StrokeThickness="0">
-                <Image Source="camera.png"/>
+                <ImageButton Source="camera.png" Clicked="ScanYourProducts_Clicked"/>
             </Border>
         </Grid>
     </VerticalStackLayout>
