@@ -3,13 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.BlindMenuPage"
              Title="BlindMenuPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="BLIND MENU PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="24"/>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
 
-        <Button Text="Back to Main" Clicked="Button_Clicked"/>
-    </VerticalStackLayout>
+            <Label 
+        Text="{Binding RecognitionText}"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        FontSize="24"/>
+
+            <Button Text="Listen"
+            Command="{Binding RecognitionText}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+            <Button Text="Listen Cancel"
+            Command="{Binding ListenCancelCommand}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+            <Button Text="Back to Main" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
