@@ -74,11 +74,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.ItemAdded.xaml
 build_metadata.AdditionalFiles.TargetPath = ItemAdded.xaml
 build_metadata.AdditionalFiles.RelativePath = ItemAdded.xaml
 
+[C:/Users/eghar/Documents/GitHub/blindspot/front-end/MyBlindSpot/MyBlindSpot/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
 [C:/Users/eghar/Documents/GitHub/blindspot/front-end/MyBlindSpot/MyBlindSpot/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/eghar/Documents/GitHub/blindspot/front-end/MyBlindSpot/MyBlindSpot/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyBlindSpot.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
 
 [C:/Users/eghar/Documents/GitHub/blindspot/front-end/MyBlindSpot/MyBlindSpot/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
