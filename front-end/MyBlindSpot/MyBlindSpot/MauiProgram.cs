@@ -3,6 +3,10 @@ using Microsoft.Extensions.Logging;
 using MyBlindSpot.ViewModel;
 using ZXing.Net.Maui.Controls;
 
+#if ANDROID
+using MyBlindSpot.Platforms;
+#endif
+
 namespace MyBlindSpot
 {
     public static class MauiProgram
@@ -35,6 +39,10 @@ namespace MyBlindSpot
 
             builder.Services.AddTransient<BlindMenuPage>();
             builder.Services.AddTransient<BlindMenuViewModel>();
+
+#if ANDROID
+            builder.Services.AddSingleton<ISpeechToText, SpeechToTextImplementation>();
+#endif
 
             builder.Services.AddTransient<CreateStoragePage>();
             builder.Services.AddTransient<CreateStorageVM>();
