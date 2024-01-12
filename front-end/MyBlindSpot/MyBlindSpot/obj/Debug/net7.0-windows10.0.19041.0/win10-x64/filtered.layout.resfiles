@@ -1,3 +1,4 @@
+black-italic.otf
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
 appicon.ico
@@ -47,6 +48,8 @@ appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
 back.scale-100.png
+barcode.scale-100.png
+barcodescanner.scale-100.png
 boxback.scale-100.png
 boxfront.scale-100.png
 camera.scale-100.png
@@ -60,6 +63,7 @@ drawer.scale-100.png
 fridge.scale-100.png
 glasses.scale-100.png
 mylogo.scale-100.png
+scanner.scale-100.png
 shake.scale-100.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png

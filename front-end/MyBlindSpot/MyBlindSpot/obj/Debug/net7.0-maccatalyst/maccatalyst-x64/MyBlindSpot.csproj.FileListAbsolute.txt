@@ -529,3 +529,10 @@ C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\barcode.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\barcodescanner.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\boxback.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\boxfront.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\check.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\scanner.png
+C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\black-italic.otf
