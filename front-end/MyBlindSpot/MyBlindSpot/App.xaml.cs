@@ -9,7 +9,7 @@ namespace MyBlindSpot
             InitializeComponent();
 
             //MainPage = new AppShell();
-            MainPage = new NavigationPage(new RegisterPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }

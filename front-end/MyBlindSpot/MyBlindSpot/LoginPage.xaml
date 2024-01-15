@@ -10,5 +10,7 @@
             HorizontalOptions="Center" />
 
         <Button Text="Login Succeeded" Clicked="LoginSucceeded_Clicked"/>
+
+        <Button Text="Register Instead" Clicked="GoToRegister_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
