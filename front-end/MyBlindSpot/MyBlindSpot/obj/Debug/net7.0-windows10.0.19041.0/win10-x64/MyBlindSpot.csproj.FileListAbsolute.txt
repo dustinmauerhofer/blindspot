@@ -1006,3 +1006,7 @@ C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\boxfront.scale-100.png
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-100.png
 C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\scanner.scale-100.png
+C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\black-italic.otf
+C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\barcode.scale-100.png
+C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\barcodescanner.scale-100.png
+C:\Users\dustin\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\scanner.scale-100.png
