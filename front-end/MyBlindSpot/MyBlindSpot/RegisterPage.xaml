@@ -3,11 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.RegisterPage"
              Title="RegisterPage">
+
     <VerticalStackLayout>
+
         <Label 
-            Text="REGISTER PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="REGISTER" 
+            HorizontalOptions="Center"
+            Margin="0,140,0,0"
+            Padding="0,5,0,15"
+            FontSize="45"
+            TextColor="#42BBFF"
+            FontFamily="BlackItalic"/>
+
+        <Entry Placeholder="USERNAME" 
+               TextColor="#444444" 
+               FontSize="25"
+               HorizontalTextAlignment="Center" 
+               BackgroundColor="#D9D9D9"
+               HeightRequest="60"
+               Margin="30,0,30,10"/>
+
+        <Entry Placeholder="PASSWORD" 
+          TextColor="#444444" 
+          FontSize="25"
+          HorizontalTextAlignment="Center" 
+          BackgroundColor="#D9D9D9"
+          HeightRequest="60"
+          Margin="30,0,30,10"/>
+
+        <Entry Placeholder="CONFIRM PASSWORD" 
+            TextColor="#444444" 
+            FontSize="25"
+            HorizontalTextAlignment="Center" 
+            BackgroundColor="#D9D9D9"
+            HeightRequest="60"
+            Margin="30,0,30,10"/>
+
+        <Label HorizontalTextAlignment="Center" FontSize="20">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="ALREADY OWN AN ACCOUNT?" TextColor="Black"/>
+                    <Span Text=" LOGIN" TextColor="#42BBFF"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Button Text="REGISTER" 
+            BackgroundColor="#42BBFF"
+            Margin="30,15,30,20"
+            Clicked="Register_Succeded"
+            FontSize="20"/>
 
         <Button Text="Go To Login" Clicked="Login_Clicked"/>
     </VerticalStackLayout>

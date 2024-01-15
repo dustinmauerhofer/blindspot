@@ -9,8 +9,15 @@ public partial class RegisterPage : ContentPage
 		InitializeComponent();
 	}
 
+  
+
     private void Login_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new LoginPage());
+    }
+
+    private void Register_Succeded(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new MainPage());
     }
 }
