@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyBlindSpot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a566e400a6c24c383039ade83b1c50e1913b542e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyBlindSpot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyBlindSpot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

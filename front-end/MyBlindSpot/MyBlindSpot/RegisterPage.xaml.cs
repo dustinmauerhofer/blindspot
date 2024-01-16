@@ -1,18 +1,15 @@
-using MyBlindSpot.Classes;
+using static Microsoft.Maui.ApplicationModel.Permissions;
 
 namespace MyBlindSpot;
 
 public partial class RegisterPage : ContentPage
 {
+	public RegisterPage()
+	{
+		InitializeComponent();
+	}
 
-    public event EventHandler<RegisterArgs> Handler;
-
-    public RegisterPage()
-    {
-        InitializeComponent();
-    }
-
-
+  
 
     private void Login_Clicked(object sender, EventArgs e)
     {
@@ -21,17 +18,6 @@ public partial class RegisterPage : ContentPage
 
     private void Register_Succeded(object sender, EventArgs e)
     {
-        RegisterInformation info = new RegisterInformation();
-        LoginPage page = new LoginPage();
-        Handler += page.RegisterFeedBack;
-
-        Task.Run(() =>
-        {
-            var response = APICalls.RegisterAccount(info).Result;
-            Handler.Invoke(this, new RegisterArgs(response));
-        });
-
-
-        Navigation.PushAsync(page);
+        Navigation.PushAsync(new MainPage());
     }
 }
