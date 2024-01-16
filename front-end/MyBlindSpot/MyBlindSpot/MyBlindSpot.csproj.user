@@ -12,46 +12,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="AddItemPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="App.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="AppShell.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="BlindMenuPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="ChooseFrontBack.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="ChoosePlace.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="ChooseSpace.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="CreateStoragePage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="EditStoragePage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="ItemAdded.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="LoginPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="MainPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Platforms\Windows\App.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="RegisterPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Resources\Styles\Colors.xaml">
@@ -60,19 +21,58 @@
     <MauiXaml Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="ScanDonePage.xaml">
+    <MauiXaml Update="ViewModel\AddItemPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="ScanProductsPage.xaml">
+    <MauiXaml Update="ViewModel\App.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="StartPage.xaml">
+    <MauiXaml Update="ViewModel\AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="StoragePage.xaml">
+    <MauiXaml Update="ViewModel\BlindMenuPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="TempCamera.xaml">
+    <MauiXaml Update="ViewModel\ChooseFrontBack.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\ChoosePlace.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\ChooseSpace.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\CreateStoragePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\EditStoragePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\ItemAdded.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\ScanDonePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\ScanProductsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\StartPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\StoragePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewModel\TempCamera.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

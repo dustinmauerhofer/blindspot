@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Speech;
+using MyBlindSpot.Classes;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
