@@ -49,17 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Remove="Resources\Styles\Colors.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiCss Include="Resources\Styles\Colors.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </MauiCss>
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
@@ -80,9 +69,11 @@
 	  <MauiXaml Update="ItemAdded.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Colors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\Styles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </MauiXaml>
 	  <MauiXaml Update="ScanDonePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
