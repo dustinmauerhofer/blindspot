@@ -24,5 +24,10 @@ namespace MyBlindSpot.Classes
         {
 
         }
+
+        public static async Task<string> RegisterAccount(RegisterInformation info)
+        {
+            return "TestOutPut";
+        }
     }
 }

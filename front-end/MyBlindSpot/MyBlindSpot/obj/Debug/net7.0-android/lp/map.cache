@@ -171,16 +171,3 @@ Xamarin.Google.AutoValue.Annotations.aar
 Xamarin.Google.Crypto.Tink.Android.aar
 ZXing.Net.MAUI.Controls.aar
 ZXing.Net.MAUI.aar
-Syncfusion.Maui.Core.dll
-Syncfusion.Maui.ImageEditor.dll
-Syncfusion.Maui.Sliders.dll
-Syncfusion.Maui.Core.aar
-Syncfusion.Maui.ImageEditor.aar
-Syncfusion.Maui.Sliders.aar
-FormsViewGroup.dll
-SkiaSharp.dll
-SkiaSharp.Views.Android.dll
-SkiaSharp.Views.Forms.dll
-Xamarin.Forms.Platform.Android.dll
-Xamarin.Forms.Platform.dll
-SkiaSharp.Views.Android.aar
