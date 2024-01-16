@@ -52,29 +52,13 @@ public partial class TempCamera : ContentPage
         });
     }
 
-    private async void TakePhoto_Clicked(object sender, EventArgs e)
+    private void TakePhoto_Clicked(object sender, EventArgs e)
     {
-        try
-        {
-            ImageSource picture = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
+        //Taking photo
+        ImageSource picture = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
+        Task<string> output = PictureRecognition.ScanPicture(picture);
+       
+        Navigation.PushAsync(new ScanDonePage(picture, output.Result));
 
-
-            Image image = new Image
-            {
-                Source = picture,
-            };
-
-            string output = await PictureRecognition.ScanPicture(picture);
-
-            //scannedImage = image;
-            //text.Text = output;
-
-            Navigation.PushAsync(new ScanDonePage(image, output));
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error: {ex.Message}");
-        }
     }
-
 }

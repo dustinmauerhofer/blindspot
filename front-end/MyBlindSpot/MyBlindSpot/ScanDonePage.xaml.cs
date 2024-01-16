@@ -7,15 +7,15 @@ namespace MyBlindSpot;
 public partial class ScanDonePage : ContentPage
 {
     StorageInformation storageInformation;
-    public ScanDonePage(Image img, string e)
+    public ScanDonePage(ImageSource img, string e)
     {
         InitializeComponent();
 
-        if (img != null)
+        var image = new Image
         {
-            picture = img;
-        }
-        
+            Source = img,
+        };
+        picture = image;
         evaluation.Text = e;
         storageInformation = new StorageInformation();
         storageInformation.StoredObject = e;
