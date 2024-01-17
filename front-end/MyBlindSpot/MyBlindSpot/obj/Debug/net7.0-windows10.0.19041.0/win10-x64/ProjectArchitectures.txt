@@ -1,1 +1,0 @@
-C:\Users\eghar\Documents\GitHub\blindspot\front-end\MyBlindSpot\MyBlindSpot\MyBlindSpot.csproj;x64
