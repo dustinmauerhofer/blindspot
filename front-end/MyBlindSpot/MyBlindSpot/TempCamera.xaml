@@ -33,7 +33,11 @@
 
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300"
                            CamerasLoaded="cameraView_CamerasLoaded"/>
-        
+
+
+
+        <Image x:Name="scannedImage" HeightRequest="400" WidthRequest="400"></Image>
+        <Label x:Name="text"></Label>
         <Button Text="TakePhoto" Clicked="TakePhoto_Clicked"/>
 
         <Button Text="Skip State for Test" Clicked="Skip_Clicked"></Button>
