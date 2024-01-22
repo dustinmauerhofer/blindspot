@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MyBlindSpot.Classes
 {
     public class APICalls
     {
+        static HttpClient client = new HttpClient();
+        static string apiUrl = "http://localhost:3000/";
+        static string contentType = "application/json";
+
         public static List<StorageField> LoadStorages()
         {
             //Funktion soll alle exsistierenden Storages eines Users über http pullen > diese in Storage objekte verwandeln und dann als gebündelte Liste returnen
@@ -17,7 +22,7 @@ namespace MyBlindSpot.Classes
         public static StorageField LoadSpecificStorage(int id)
         {
             //diese Funktion soll einen Spezifischen Storage über http pullen und diesen als Storage object returnen
-            return new StorageField("",5,5);
+            return new StorageField("", 5, 5);
         }
 
         public static void SaveStorage(int id, StorageField storageInformation)
@@ -25,9 +30,12 @@ namespace MyBlindSpot.Classes
 
         }
 
-        public static async Task<string> RegisterAccount(RegisterInformation info)
+        public static  Task<HttpResponseMessage> RegisterAccount(RegisterInformation info)
         {
-            return "TestOutPut";
+            string jsonString = JsonSerializer.Serialize(info);
+            HttpContent content = new StringContent(jsonString, Encoding.UTF8, contentType);
+            var response = client.PostAsync($"{apiUrl}users/register", content);
+            return response;
         }
     }
 }

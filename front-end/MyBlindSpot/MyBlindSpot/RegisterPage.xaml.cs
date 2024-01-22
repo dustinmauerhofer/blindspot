@@ -19,17 +19,18 @@ public partial class RegisterPage : ContentPage
         Navigation.PushAsync(new LoginPage());
     }
 
-    private void Register_Succeded(object sender, EventArgs e)
+    private async void Register_Succeded(object sender, EventArgs e)
     {
-        RegisterInformation info = new RegisterInformation();
+        RegisterInformation info = new RegisterInformation(username.Text, password.Text);
+        HttpResponseMessage response = await APICalls.RegisterAccount(info);
+
         LoginPage page = new LoginPage();
         Handler += page.RegisterFeedBack;
 
-        Task.Run(() =>
-        {
-            var response = APICalls.RegisterAccount(info).Result;
-            Handler.Invoke(this, new RegisterArgs(response));
-        });
+        //Task.Run(() =>
+        //{
+            Handler.Invoke(this, new RegisterArgs(response.ToString()));
+        //});
 
 
         Navigation.PushAsync(page);

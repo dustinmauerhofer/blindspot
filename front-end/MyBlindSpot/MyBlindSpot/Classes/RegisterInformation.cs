@@ -8,5 +8,15 @@ namespace MyBlindSpot.Classes
 {
     public class RegisterInformation
     {
+        public string userName { get; set; }
+        public string password { get; set; }
+
+        public RegisterInformation(string userName, string password)
+        {
+            this.userName = userName;
+            this.password = password;
+        }
+
+        public RegisterInformation() { }
     }
 }
