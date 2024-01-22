@@ -5,12 +5,45 @@
              Title="LoginPage">
     <VerticalStackLayout>
         <Label 
-            Text="LOGIN PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="LOGIN" 
+            HorizontalOptions="Center"
+            Margin="0,140,0,0"
+            Padding="0,5,0,15"
+            FontSize="45"
+            TextColor="#42BBFF"
+            FontFamily="BlackItalic"/>
 
-        <Button Text="Login Succeeded" Clicked="LoginSucceeded_Clicked"/>
+        <Entry Placeholder="USERNAME" 
+               TextColor="#444444" 
+               FontSize="25"
+               HorizontalTextAlignment="Center" 
+               BackgroundColor="#D9D9D9"
+               HeightRequest="60"
+               Margin="30,0,30,10"/>
 
+        <Entry Placeholder="PASSWORD" 
+                  TextColor="#444444" 
+                  FontSize="25"
+                  HorizontalTextAlignment="Center" 
+                  BackgroundColor="#D9D9D9"
+                  HeightRequest="60"
+                  Margin="30,0,30,10"/>
+
+        <Label HorizontalTextAlignment="Center" FontSize="20">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="DON'T OWN AN ACCOUNT?" TextColor="Black"/>
+                    <Span Text=" REGISTER" TextColor="#42BBFF"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Button Text="LOGIN" 
+                BackgroundColor="#42BBFF"
+                Margin="30,15,30,20"
+                Clicked="LoginSucceeded_Clicked"
+                FontSize="20"/>
+        
         <Button Text="Register Instead" Clicked="GoToRegister_Clicked"/>
 
         <Label x:Name="feedbackPopUp"></Label>
