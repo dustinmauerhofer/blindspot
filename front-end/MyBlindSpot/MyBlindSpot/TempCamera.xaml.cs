@@ -1,4 +1,5 @@
 using Camera.MAUI;
+using MyBlindSpot.Classes;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
@@ -6,7 +7,8 @@ namespace MyBlindSpot;
 
 public partial class TempCamera : ContentPage
 {
-    public TempCamera()
+    UserInformation info;
+    public TempCamera(UserInformation user)
     {
         InitializeComponent();
 
@@ -14,16 +16,18 @@ public partial class TempCamera : ContentPage
         {
             AutoRotate = true,
         };
+
+        info = user;
     }
 
     private void Back_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(info));
     }
 
     private void Skip_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ScanDonePage(null,""));
+        Navigation.PushAsync(new ScanDonePage(null,"",info));
     }
 
     // camera methods 
@@ -69,7 +73,7 @@ public partial class TempCamera : ContentPage
             scannedImage = image;
             text.Text = output;
 
-            Navigation.PushAsync(new ScanDonePage(image, output));
+            Navigation.PushAsync(new ScanDonePage(image, output,info));
         }
         catch (Exception ex)
         {

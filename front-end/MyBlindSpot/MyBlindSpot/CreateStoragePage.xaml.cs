@@ -6,11 +6,12 @@ namespace MyBlindSpot;
 public partial class CreateStoragePage : ContentPage
 {
     private List<CustomFrame> customFrames = new List<CustomFrame>();
-
-    public CreateStoragePage()
+    UserInformation info;
+    public CreateStoragePage(UserInformation user)
     {
         InitializeComponent();
         GenerateGrid();
+        info = user;
     }
 
     private void GenerateGrid()
@@ -94,7 +95,7 @@ public partial class CreateStoragePage : ContentPage
     {
         // Add Storage to Database Logic
         SaveStorage();
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(info));
     }
 
     private void SaveStorage()

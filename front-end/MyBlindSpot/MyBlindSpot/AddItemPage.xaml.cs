@@ -8,10 +8,12 @@ namespace MyBlindSpot;
 public partial class AddItemPage : ContentPage
 {
     StorageInformation storageInformation;
-    public AddItemPage(StorageInformation st)
+    UserInformation info;
+    public AddItemPage(StorageInformation st, UserInformation user)
     {
         InitializeComponent();
         storageInformation = st;
+        info = user;
         var loadedStorages = APICalls.LoadStorages();
 
         SetGridLayout(loadedStorages.Count());
@@ -65,7 +67,7 @@ public partial class AddItemPage : ContentPage
 
     public void SendItem(StorageField sf)
     {
-        Navigation.PushAsync(new ChoosePlace(storageInformation,sf));
+        Navigation.PushAsync(new ChoosePlace(storageInformation,sf,info));
     }
 
     private void SetGridLayout(int v)

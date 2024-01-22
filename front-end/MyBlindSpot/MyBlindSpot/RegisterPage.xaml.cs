@@ -15,7 +15,7 @@ public partial class RegisterPage : ContentPage
 
 
     private void Login_Clicked(object sender, EventArgs e)
-    {
+    {  
         Navigation.PushAsync(new LoginPage());
     }
 

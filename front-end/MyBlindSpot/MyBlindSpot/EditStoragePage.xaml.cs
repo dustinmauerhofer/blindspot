@@ -1,12 +1,15 @@
+using MyBlindSpot.Classes;
 using MyBlindSpot.ViewModel;
 
 namespace MyBlindSpot;
 
 public partial class EditStoragePage : ContentPage
 {
-    public EditStoragePage()
+    UserInformation info;
+    public EditStoragePage(UserInformation user)
     {
         InitializeComponent();
+        info = user;
     }
 
     public EditStoragePage(EditStorageVM vm)
@@ -17,7 +20,7 @@ public partial class EditStoragePage : ContentPage
 
     private void Camera_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new TempCamera());
+        Navigation.PushAsync(new TempCamera(info));
     }
 
     private void DeleteItem_Click(object sender, EventArgs e)
@@ -27,6 +30,6 @@ public partial class EditStoragePage : ContentPage
 
     private void Back_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(info));
     }
 }

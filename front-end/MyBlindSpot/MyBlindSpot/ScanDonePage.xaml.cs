@@ -7,7 +7,8 @@ namespace MyBlindSpot;
 public partial class ScanDonePage : ContentPage
 {
     StorageInformation storageInformation;
-    public ScanDonePage(Image img, string e)
+    UserInformation info;
+    public ScanDonePage(Image img, string e, UserInformation user)
     {
         InitializeComponent();
 
@@ -19,16 +20,18 @@ public partial class ScanDonePage : ContentPage
         evaluation.Text = e;
         storageInformation = new StorageInformation();
         storageInformation.StoredObject = e;
+
+        info = user;
     }
 
 
     private void SaveNewItem_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new AddItemPage(storageInformation));
+        Navigation.PushAsync(new AddItemPage(storageInformation,info));
     }
 
     private void Retake_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new TempCamera());
+        Navigation.PushAsync(new TempCamera(info));
     }
 }

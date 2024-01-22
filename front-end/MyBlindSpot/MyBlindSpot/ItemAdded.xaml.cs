@@ -5,10 +5,12 @@ namespace MyBlindSpot;
 public partial class ItemAdded : ContentPage
 {
     StorageInformation storageInformation;
-	public ItemAdded(StorageInformation si)
+    UserInformation info;
+	public ItemAdded(StorageInformation si, UserInformation user)
 	{
 		InitializeComponent();
         storageInformation = si;
+        info = user;
 
         //Testing
         string outputString = $"Object:{storageInformation.StoredObject} ,Location in Storage X:{storageInformation.Location.Item1} Y:{storageInformation.Location.Item2},Location in Unit:";
@@ -19,10 +21,15 @@ public partial class ItemAdded : ContentPage
         }
         outputString += $", Back / Front { storageInformation.FrontBackAlignment}";
 
+        // adding user data test
+
+        outputString += $",Id: {info.Id}, username: {info.UserName}";
         output.Text = outputString;
+
+       
     }
     private void BackToYourStroages_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(info));
     }
 }
