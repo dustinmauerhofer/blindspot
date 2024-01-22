@@ -1,12 +1,16 @@
+using MyBlindSpot.Classes;
 using MyBlindSpot.ViewModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MyBlindSpot;
 
 public partial class StartPage : ContentPage
 {
-    public StartPage()
+    UserInformation user;
+    public StartPage(UserInformation info)
     {
         InitializeComponent();
+        user = info;
     }
 
     public StartPage( StartViewmodel vm)
@@ -23,12 +27,12 @@ public partial class StartPage : ContentPage
 
     private void YourStorages_Click(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(user));
     }
 
     private void Camera_Click(object sender, EventArgs e)
     {
         // CAM NAVIGATION
-        Navigation.PushAsync(new TempCamera());
+        Navigation.PushAsync(new TempCamera(user));
     }
 }

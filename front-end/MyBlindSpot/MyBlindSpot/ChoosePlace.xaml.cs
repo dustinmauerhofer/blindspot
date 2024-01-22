@@ -7,11 +7,13 @@ public partial class ChoosePlace : ContentPage
     CustomFrame lastFrame = null;
     StorageInformation storageInformation;
     StorageField storageField;
-	public ChoosePlace(StorageInformation st,StorageField sf)
+    UserInformation info;
+	public ChoosePlace(StorageInformation st,StorageField sf, UserInformation user)
 	{
 		InitializeComponent();
         storageInformation = st;
         storageField = sf;
+        info = user;
         GenerateGrid();
     }
 
@@ -120,21 +122,21 @@ public partial class ChoosePlace : ContentPage
     private void ContinueToSpace_Clicked(object sender, EventArgs e)
     {
         
-        Navigation.PushAsync(new ChooseSpace(storageInformation,storageField));
+        Navigation.PushAsync(new ChooseSpace(storageInformation,storageField,info));
     }
 
     private void Camera_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new TempCamera());
+        Navigation.PushAsync(new TempCamera(info));
     }
 
     private void Storage_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new StoragePage());
+        Navigation.PushAsync(new StoragePage(info));
     }
 
     private void Back_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new CreateStoragePage());
+        Navigation.PushAsync(new CreateStoragePage(info));
     }
 }

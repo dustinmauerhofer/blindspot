@@ -1,13 +1,15 @@
+using MyBlindSpot.Classes;
 using MyBlindSpot.ViewModel;
 
 namespace MyBlindSpot;
 
 public partial class ScanProductsPage : ContentPage
 {
-	public ScanProductsPage()
+    UserInformation info;
+	public ScanProductsPage(UserInformation user)
 	{
 		InitializeComponent();
-		//BindingContext = vm;
+		info = user;
 	}
 
     private void AiScanner_Tapped(object sender, TappedEventArgs e)

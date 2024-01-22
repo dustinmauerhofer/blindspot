@@ -1,3 +1,4 @@
+using MyBlindSpot.Classes;
 using System.Globalization;
 
 namespace MyBlindSpot;
@@ -10,16 +11,21 @@ public partial class BlindMenuPage : ContentPage
     public Command ListenCancelCommand { get; set; }
     public string RecognitionText { get; set; }
 
-    public BlindMenuPage(ISpeechToText speechToText /*, BlindMenuPage vm*/)
+    UserInformation info;
+
+    public BlindMenuPage(ISpeechToText speechToText, UserInformation user)
     {
         InitializeComponent();
         //BindingContext = vm;
+
+        info = user;
 
         this.speechToText = speechToText;
 
         this.ListenCommand = new Command(Listen);
         this.ListenCancelCommand = new Command(ListenCancel);
         this.BindingContext = this;
+
     }
 
     private void ListenCancel()
@@ -62,6 +68,6 @@ public partial class BlindMenuPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MainPage());
+        Navigation.PushAsync(new MainPage(info));
     }
 }
