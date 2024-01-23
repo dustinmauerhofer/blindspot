@@ -39,8 +39,9 @@
         <Label HorizontalTextAlignment="Center" FontSize="20">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="DON'T OWN AN ACCOUNT?" TextColor="Black"/>
-                    <Span Text=" REGISTER" TextColor="#42BBFF">
+                        <Span Text="DON'T OWN AN ACCOUNT?" TextColor="Black"/>
+                    
+                        <Span Text=" REGISTER" TextColor="#42BBFF">
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="GoToRegister_Tapped"/>
                             </Span.GestureRecognizers>
@@ -49,7 +50,9 @@
             </Label.FormattedText>
         </Label>
 
-        <Button Text="LOGIN" 
+            <Button Text="REGISTER" BackgroundColor="Transparent" TextColor="#42BBFF" Clicked="GoToRegister_Clicked"/>
+
+            <Button Text="LOGIN" 
                 BackgroundColor="#42BBFF"
                 Margin="30,15,30,20"
                 Clicked="LoginSucceeded_Clicked"
