@@ -1,4 +1,5 @@
 using Camera.MAUI;
+using CommunityToolkit.Maui.Converters;
 using MyBlindSpot.Classes;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
@@ -61,19 +62,13 @@ public partial class TempCamera : ContentPage
         try
         {
             ImageSource picture = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
-
-
-            Image image = new Image
-            {
-                Source = picture,
-            };
-
+    
             string output = await PictureRecognition.ScanPicture(picture);
 
-            scannedImage = image;
-            text.Text = output;
-
-            Navigation.PushAsync(new ScanDonePage(image, output,info));
+            ByteArrayToImageSourceConverter converter = new ByteArrayToImageSourceConverter();
+            byte[] bytes = converter.ConvertBackTo(picture);
+           
+            Navigation.PushAsync(new ScanDonePage(bytes, output,info));
         }
         catch (Exception ex)
         {

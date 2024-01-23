@@ -14,7 +14,7 @@ public partial class AddItemPage : ContentPage
         InitializeComponent();
         storageInformation = st;
         info = user;
-        var loadedStorages = APICalls.LoadStorages();
+        var loadedStorages = APICalls.LoadStorages(info);
 
         SetGridLayout(loadedStorages.Count());
 

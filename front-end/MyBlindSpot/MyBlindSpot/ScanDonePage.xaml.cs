@@ -1,6 +1,7 @@
 using MyBlindSpot.ViewModel;
 using Microsoft.Maui.Controls;
 using MyBlindSpot.Classes;
+using CommunityToolkit.Maui.Converters;
 
 namespace MyBlindSpot;
 
@@ -8,15 +9,16 @@ public partial class ScanDonePage : ContentPage
 {
     StorageInformation storageInformation;
     UserInformation info;
-    public ScanDonePage(Image img, string e, UserInformation user)
+    public ScanDonePage(byte[] bytes, string e, UserInformation user)
     {
         InitializeComponent();
 
-        if (img != null)
-        {
-            picture = img;
-        }
-        
+        ByteArrayToImageSourceConverter converter = new ByteArrayToImageSourceConverter();
+
+        //https://docs.telerik.com/devtools/maui/controls/imageeditor/loading-image
+
+        picture.Source = converter.ConvertFrom(bytes);
+
         evaluation.Text = e;
         storageInformation = new StorageInformation();
         storageInformation.StoredObject = e;
@@ -24,7 +26,7 @@ public partial class ScanDonePage : ContentPage
         info = user;
     }
 
-
+  
     private void SaveNewItem_Click(object sender, EventArgs e)
     {
         Navigation.PushAsync(new AddItemPage(storageInformation,info));

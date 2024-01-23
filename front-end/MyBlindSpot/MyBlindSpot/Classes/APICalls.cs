@@ -13,7 +13,7 @@ namespace MyBlindSpot.Classes
         static string apiUrl = "http://localhost:3000/";
         static string contentType = "application/json";
 
-        public static List<StorageField> LoadStorages()
+        public static List<StorageField> LoadStorages(UserInformation info)
         {
             //Funktion soll alle exsistierenden Storages eines Users über http pullen > diese in Storage objekte verwandeln und dann als gebündelte Liste returnen
             return new List<StorageField>();
@@ -23,6 +23,11 @@ namespace MyBlindSpot.Classes
         {
             //diese Funktion soll einen Spezifischen Storage über http pullen und diesen als Storage object returnen
             return new StorageField("", 5, 5);
+        }
+
+        public static List<Items> LoadeItems(int id, UserInformation info )
+        {
+
         }
 
         public static void SaveStorage(int id, StorageField storageInformation)

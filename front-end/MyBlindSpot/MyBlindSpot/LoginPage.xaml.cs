@@ -36,6 +36,7 @@ public partial class LoginPage : ContentPage
 
     private void LoginSucceeded_Clicked(object sender, EventArgs e)
     {
+        //hier macht adam sachen
         UserInformation info = new UserInformation(1, "TestAcc");
         
         Navigation.PushAsync(new MainPage(info));

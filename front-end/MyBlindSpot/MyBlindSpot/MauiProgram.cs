@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Logging;
 using MyBlindSpot.ViewModel;
 using ZXing.Net.Maui.Controls;
+using CommunityToolkit.Maui;
+
 
 #if ANDROID
 using MyBlindSpot.Platforms;
@@ -17,6 +19,7 @@ namespace MyBlindSpot
             builder
                 .UseMauiApp<App>()
                 .UseBarcodeReader()
+                .UseMauiCommunityToolkit()
                 .UseMauiCameraView()
                 .ConfigureFonts(fonts =>
                 {
