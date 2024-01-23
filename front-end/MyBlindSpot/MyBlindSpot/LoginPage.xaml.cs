@@ -46,4 +46,9 @@ public partial class LoginPage : ContentPage
     {
         Navigation.PushAsync(new RegisterPage());
     }
+
+    private void GoToRegister_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegisterPage());
+    }
 }
