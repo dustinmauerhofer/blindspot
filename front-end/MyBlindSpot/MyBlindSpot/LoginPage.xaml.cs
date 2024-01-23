@@ -41,7 +41,7 @@ public partial class LoginPage : ContentPage
         Navigation.PushAsync(new MainPage(info));
     }
 
-    private void GoToRegister_Clicked(object sender, EventArgs e)
+    private void GoToRegister_Tapped(object sender, TappedEventArgs e)
     {
         Navigation.PushAsync(new RegisterPage());
     }

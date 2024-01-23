@@ -27,7 +27,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Column="0" HeightRequest="150" StrokeThickness="0" >
+                <Border Grid.Column="0" HeightRequest="150" StrokeThickness="0">
                     <StackLayout Padding="0,10,0,10">
                         <Image Source="fridge.png" HeightRequest="100"/>
                         <Label 

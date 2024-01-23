@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.LoginPage"
              Title="LoginPage">
+
+    <Grid>
+        <FlexLayout>
+        
+        </FlexLayout>
+
+    
     <VerticalStackLayout>
         <Label 
             Text="LOGIN" 
@@ -33,8 +40,12 @@
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="DON'T OWN AN ACCOUNT?" TextColor="Black"/>
-                    <Span Text=" REGISTER" TextColor="#42BBFF"/>
-                </FormattedString>
+                    <Span Text=" REGISTER" TextColor="#42BBFF">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToRegister_Tapped"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
             </Label.FormattedText>
         </Label>
 
@@ -44,8 +55,8 @@
                 Clicked="LoginSucceeded_Clicked"
                 FontSize="20"/>
         
-        <Button Text="Register Instead" Clicked="GoToRegister_Clicked"/>
-
         <Label x:Name="feedbackPopUp"></Label>
     </VerticalStackLayout>
+
+   </Grid>
 </ContentPage>
