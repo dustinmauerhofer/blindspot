@@ -14,7 +14,7 @@ public partial class ScanProductsPage : ContentPage
 
     private void AiScanner_Tapped(object sender, TappedEventArgs e)
     {
-
+        Navigation.PushAsync(new TempCamera(info));
     }
 
     private void BarcodeScanner_Tapped(object sender, TappedEventArgs e)

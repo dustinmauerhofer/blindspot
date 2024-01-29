@@ -16,6 +16,6 @@ public partial class InsideStorage : ContentPage
 
     private void PullItems()
     {
-        var items = APICalls.LoadeItems()
+		var items = APICalls.LoadeItems(1,info);
     }
 }

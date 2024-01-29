@@ -4,57 +4,42 @@
              x:Class="MyBlindSpot.ChoosePlace"
              Title="ChoosePlace">
     <Grid>
-        <ScrollView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
             <VerticalStackLayout>
+                <Label Text="ADD ITEM" HorizontalTextAlignment="Center" FontSize="35" TextColor="#42BBFF" FontFamily="BlackItalic" Margin="0,5"/>
+                <Label Text="CHOOSE THE PLACE YOU WANT TO PUT THE ITEM IN" HorizontalTextAlignment="Center" FontSize="22" Margin="40,10" FontFamily="BlackItalic"/>
 
-                <Label 
-         Text="ADD ITEM" 
-         HorizontalTextAlignment="Center"
-         FontSize="35"
-         TextColor="#42BBFF"
-         FontFamily="BlackItalic"
-         Margin="0,5"/>
-
-                <Label 
-         Text="CHOOSE THE PLACE YOU WANT TO PUT THE ITEM IN" 
-         HorizontalTextAlignment="Center"
-         FontSize="22"
-         Margin="40,10"
-         FontFamily="BlackItalic"/>
-
+                
                 <Grid x:Name="selectionGrid" HorizontalOptions="Center"></Grid>
-
-
+                <FlexLayout Grid.Row="1" Direction="Column" BackgroundColor="Transparent">
+                    <Button Text="Continue" WidthRequest="300" HeightRequest="70" FontSize="30" Margin="80,20,140,20" BackgroundColor="#42BBFF" Clicked="ContinueToSpace_Clicked"/>
+                </FlexLayout>
+            </VerticalStackLayout>
+        </ScrollView>
 
       
 
-
-            </VerticalStackLayout>
-        </ScrollView>
-        <FlexLayout Direction="Column">
-            <Button 
-             Text="Continue"
-             WidthRequest="300"
-             HeightRequest="70"
-             FontSize="30"
-             Margin="80,280,140,20"
-             BackgroundColor="#42BBFF"
-             Clicked="ContinueToSpace_Clicked"/>
-        </FlexLayout>
+     
+        
 
 
-        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
+            <!--<FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
 
             <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
 
-            <Grid FlexLayout.Grow="1" Margin="0,-610">
+            <Grid FlexLayout.Grow="1" Margin="0,-320" BackgroundColor="Yellow" VerticalOptions="Start">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0" BackgroundColor="Transparent">
                     <Image Source="back.png">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Back_Tapped"/>
@@ -62,7 +47,7 @@
                     </Image>
                 </Border>
 
-                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0" BackgroundColor="Transparent">
                     <Image Source="drawer.png" >
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Storage_Tapped"/>
@@ -70,7 +55,7 @@
                     </Image>
                 </Border>
 
-                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0" BackgroundColor="Transparent">
                     <Image Source="camera.png">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Camera_Tapped"/>
@@ -78,8 +63,7 @@
                     </Image>
                 </Border>
             </Grid>
-        </FlexLayout>
-
-
+        </FlexLayout>-->
+        
     </Grid>
 </ContentPage>

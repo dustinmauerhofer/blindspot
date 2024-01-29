@@ -30,6 +30,6 @@ public partial class ItemAdded : ContentPage
     }
     private void BackToYourStroages_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new StoragePage(info));
+        Navigation.PushAsync(new MainPage(info));
     }
 }

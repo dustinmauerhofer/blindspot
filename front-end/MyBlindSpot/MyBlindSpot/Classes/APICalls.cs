@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace MyBlindSpot.Classes
 
         public static List<Items> LoadeItems(int id, UserInformation info )
         {
-
+            return new List<Items>();
         }
 
         public static void SaveStorage(int id, StorageField storageInformation)

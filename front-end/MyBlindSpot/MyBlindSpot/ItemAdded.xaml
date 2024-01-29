@@ -5,26 +5,28 @@
              Title="ItemAdded">
     <Grid>
         <VerticalStackLayout>
-            <Label 
-           Text="ADD ITEM" 
-           HorizontalTextAlignment="Center"
-           FontSize="35"
-           TextColor="#42BBFF"
-           FontFamily="BlackItalic"
-           Margin="0,5"/>
+            <Grid>
+                <Label 
+                    Text="ADD ITEM" 
+                    HorizontalTextAlignment="Center"
+                    FontSize="35"
+                    TextColor="#42BBFF"
+                    FontFamily="BlackItalic"
+                    Margin="0,5"/>
 
-            <Label 
-           Text="THE ITEM IS ADDED IN YOUR STORAGE" 
-           HorizontalTextAlignment="Center"
-           FontSize="22"
-           Margin="40,10"
-           FontFamily="BlackItalic"/>
+                <Label 
+                    Text="THE ITEM IS ADDED IN YOUR STORAGE" 
+                    HorizontalTextAlignment="Center"
+                    FontSize="22"
+                    Margin="40,10"
+                    FontFamily="BlackItalic"/>
 
-            <Image Source="check.png" WidthRequest="150" VerticalOptions="Center"/>
-        </VerticalStackLayout>
+                <Image Source="check.png" WidthRequest="150" VerticalOptions="Center"/>
+            </Grid>
 
-        <FlexLayout Direction="Column">
-            <Button 
+            <Grid>
+                <FlexLayout Direction="Column">
+                    <Button 
                 Text="Continue"
                 WidthRequest="300"
                 HeightRequest="70"
@@ -32,9 +34,10 @@
                 Margin="80,280,140,150"
                 BackgroundColor="#42BBFF"
                 Clicked="BackToYourStroages_Clicked"/>
-        </FlexLayout>
+                </FlexLayout>
+
+                <Label Text="Output: " x:Name="output" VerticalTextAlignment="End" VerticalOptions="End"/>
+            </Grid>
+        </VerticalStackLayout>
     </Grid>
-
-
-    <Label x:Name="output"></Label>
 </ContentPage>

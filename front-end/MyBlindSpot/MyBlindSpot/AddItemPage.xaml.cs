@@ -20,7 +20,7 @@ public partial class AddItemPage : ContentPage
 
         //only for testing purpse
         if(loadedStorages.Count() == 0)
-            loadedStorages.Add(new StorageField("",10, 10));
+            loadedStorages.Add(new StorageField("",4, 4));
         //
 
 
