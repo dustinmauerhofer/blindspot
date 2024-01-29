@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.StoragePage"
              Title="StoragePage">
-    <VerticalStackLayout>
-       
-        <Label 
+    <Grid>
+        <VerticalStackLayout>
+
+            <Label 
         Text="YOUR STORAGES" 
         HorizontalOptions="Center"
         Padding="0,5,0,15"
@@ -13,44 +14,69 @@
         TextColor="#42BBFF"
         FontFamily="BlackItalic"/>
 
-    <ScrollView>
-            <StackLayout>
-                <Grid x:Name="storagesGrid">
+            <ScrollView>
+                <StackLayout>
+                    <Grid x:Name="storagesGrid">
 
 
-                </Grid>
-        </StackLayout>
-    </ScrollView>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
 
-        <VerticalStackLayout Padding="0,210,0,0">
+
+        </VerticalStackLayout>
+
+
+        <FlexLayout Padding="0,210,0,0">
 
             <Button Text="CREATE A NEW STORAGE" 
                 BackgroundColor="#42BBFF"
-                Margin="30,15,30,20"
                 Clicked="AddNewStorage_Clicked"
-                FontSize="20"/>
-       
-        <Line Stroke="Black" X2="1000"/>
+                FontSize="20"
+                    WidthRequest="350"
+                    HeightRequest="60"
+                    Margin="10,0,0,-1150"
+                    VerticalOptions="Center"/>
+        </FlexLayout>
+        
+        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
 
-        <Grid Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" HeightRequest="50" WidthRequest="50"  StrokeThickness="0">
-                <Image Source="back.png" />
-            </Border>
+            <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
 
-            <Border Grid.Column="1" HeightRequest="50" WidthRequest="50"  StrokeThickness="0">
-                <Image Source="drawer.png" />
-            </Border>
+                <Grid FlexLayout.Grow="1" Margin="0,-610">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="2" HeightRequest="50" WidthRequest="50"  StrokeThickness="0">
-                <ImageButton Source="camera.png" Clicked="ScanYourProducts_Clicked"/>
-            </Border>
-        </Grid>
-    </VerticalStackLayout>
-    </VerticalStackLayout>
+                    <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                        <Image Source="back.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Back_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Border>
+
+                    <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                        <Image Source="drawer.png" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Storage_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Border>
+
+                    <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                        <Image Source="camera.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Camera_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Border>
+                </Grid>
+
+            </FlexLayout>
+    </Grid>
+
 </ContentPage>

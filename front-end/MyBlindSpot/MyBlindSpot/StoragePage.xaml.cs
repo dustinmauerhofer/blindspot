@@ -105,4 +105,20 @@ public partial class StoragePage : ContentPage
     {
         Navigation.PushAsync(new ScanProductsPage(info));
     }
+
+    // TAPPED EVENTS FOR THE RIGHT HOTBAR
+    private void Camera_Tapped(object sender, TappedEventArgs e)
+    {
+        Navigation.PushAsync(new LoginPage()); // CHANGE
+    }
+
+    private void Storage_Tapped(object sender, TappedEventArgs e)
+    {
+        Navigation.PushAsync(new LoginPage()); // CHANGE
+    }
+
+    private void Back_Tapped(object sender, TappedEventArgs e)
+    {
+        Navigation.PushAsync(new LoginPage()); // CHANGE!
+    }
 }
