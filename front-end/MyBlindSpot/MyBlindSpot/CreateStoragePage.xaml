@@ -1,71 +1,63 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.CreateStoragePage"
              Title="CreateStoragePage">
+
     <ScrollView>
-    <VerticalStackLayout>
-        <Label 
+        <VerticalStackLayout>
+            <Label 
        Text="CREATE NEW STORAGE" 
        HorizontalTextAlignment="Center"
-       FontSize="45"
+       FontSize="40"
        TextColor="#42BBFF"
-       FontFamily="BlackItalic"/>
+       FontFamily="BlackItalic"
+        Margin="10"/>
 
-        <Label 
+            <Label 
        Text="PRESS THE + BUTTON TO ADD YOUR STORAGE SPACE"
        HorizontalTextAlignment="Center"
        FontSize="20"
        TextColor="Black"
        FontFamily="BlackItalic"
-       Margin="0,10"/>
+                Margin="0,0,0,10"/>
 
-        <Grid Margin="20,10" HorizontalOptions="Center" x:Name="storageGrid">
-            
-        </Grid>
+            <Grid x:Name="storageGrid" Margin="20">
 
-        <VerticalStackLayout>
+            </Grid>
 
-            <Button Text="ADD TO YOUR STORAGE" 
+            <VerticalStackLayout>
+
+                <Button Text="ADD TO YOUR STORAGE" 
                     BackgroundColor="#42BBFF"
-                    Margin="30,15,30,0"
+                    Margin="30,25,30,20"
                     Clicked="StorageDone_Clicked"
                     FontSize="20"/>
 
+                <Line Stroke="Black" X2="1000"/>
 
-            <Label  
-            HorizontalOptions="Center" 
-            VerticalOptions="Center"
-            FontSize="24"
-            Text="ADD TO YOUR STORAGE"
-            TextColor="White"
-           FontFamily="BlackItalic">
-            </Label>
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
+                    <Border Grid.Column="0" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
+                        <Image Source="back.png" />
 
-            <Line Stroke="Black" X2="1000"/>
+                    </Border>
 
-            <Grid Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                    <Border Grid.Column="1" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
+                        <Image Source="drawer.png" />
+                    </Border>
 
-                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
-                    <Image Source="back.png" />
-                    
-                </Border>
-
-                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
-                    <Image Source="drawer.png" />
-                </Border>
-
-                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
-                    <Image Source="camera.png"/>
-                </Border>
-            </Grid>
+                    <Border Grid.Column="2" HeightRequest="65" WidthRequest="50"  StrokeThickness="0">
+                        <Image Source="camera.png"/>
+                    </Border>
+                </Grid>
+            </VerticalStackLayout>
         </VerticalStackLayout>
-    </VerticalStackLayout>
     </ScrollView>
+
 </ContentPage>

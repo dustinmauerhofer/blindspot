@@ -16,7 +16,7 @@ public partial class CreateStoragePage : ContentPage
 
     private void GenerateGrid()
     {
-        int xcord = 5;
+        int xcord = 7;
         int ycord = 5;
 
         storageGrid.RowDefinitions.Clear();
@@ -43,25 +43,23 @@ public partial class CreateStoragePage : ContentPage
                 CustomFrame frame = new CustomFrame
                 {
                     BackgroundColor = Colors.Transparent,
-                    HeightRequest = 280,
-                    WidthRequest = 150,
+                    HeightRequest = 90,
+                    WidthRequest = 110,
                     BorderColor = Colors.Transparent,
-                    Margin = -30,
+                    Margin= -20,
                     Content = new Border
                     {
                         StrokeThickness = 3,
                         Stroke = Colors.Black,
                         BackgroundColor = Color.FromHex("#42BBFF"),
-                        Content = new StackLayout
+                        Content = new Grid
                         {
-                            VerticalOptions = LayoutOptions.Center,
-                            Spacing = 10,
                             Children = {
                                 new Label
                                 {
-                                    HorizontalOptions = LayoutOptions.Center,
-                                    VerticalOptions = LayoutOptions.Center,
-                                    FontSize = 50,
+                                   HorizontalOptions = LayoutOptions.Center,
+                                   VerticalOptions = LayoutOptions.Center,
+                                    FontSize = 30,
                                     Text = "+",
                                     TextColor = Colors.Black,
                                     FontFamily="BlackItalic"
@@ -113,13 +111,13 @@ public partial class CreateStoragePage : ContentPage
             {
                 MaxY = frame.Column;
             }
-            if(frame.Row > MaxX)
+            if (frame.Row > MaxX)
             {
                 MaxX = frame.Row;
             }
         }
 
-        APICalls.SaveStorage(id, new StorageField(MaxX,MaxY));
+        APICalls.SaveStorage(id, new StorageField(MaxX, MaxY));
     }
 
     private void Tapped_Left(object sender, TappedEventArgs e)
