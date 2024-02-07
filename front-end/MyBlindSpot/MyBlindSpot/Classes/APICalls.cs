@@ -17,7 +17,14 @@ namespace MyBlindSpot.Classes
         public static List<StorageField> LoadStorages(UserInformation info)
         {
             //Funktion soll alle exsistierenden Storages eines Users über http pullen > diese in Storage objekte verwandeln und dann als gebündelte Liste returnen
-            return new List<StorageField>();
+            List<StorageField> storageLists = new List<StorageField>();
+            storageLists.Add(new StorageField(4, 5));
+            storageLists.Add(new StorageField(4, 5));
+            storageLists.Add(new StorageField(4, 5));
+            storageLists.Add(new StorageField(4, 5));
+            storageLists.Add(new StorageField(4, 5));
+            storageLists.Add(new StorageField(4, 5));
+            return storageLists;
         }
 
         public static StorageField LoadSpecificStorage(int id)
@@ -28,7 +35,12 @@ namespace MyBlindSpot.Classes
 
         public static List<Items> LoadeItems(int id, UserInformation info )
         {
-            return new List<Items>();
+            List<Items> items = new List<Items>();
+
+            items.Add(new Items("test1", 1, 1));
+            items.Add(new Items("test2", 2, 2));
+            items.Add(new Items("test3", 3, 3));
+            return items;
         }
 
         public static void SaveStorage(int id, StorageField storageInformation)

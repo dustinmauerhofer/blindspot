@@ -19,6 +19,6 @@ public partial class ScanProductsPage : ContentPage
 
     private void BarcodeScanner_Tapped(object sender, TappedEventArgs e)
     {
-
+        Navigation.PushAsync(new ScannerPage(info));
     }
 }

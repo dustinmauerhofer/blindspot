@@ -24,55 +24,61 @@ public partial class StoragePage : ContentPage
     private void CreateGird(List<StorageField> storages)
     {
         storagesGrid.Children.Clear();
-        foreach (var storage in storages)
-        {
 
+        for (int i = 1; i < storages.Count; i++)
+        {
+            storagesGrid.RowDefinitions.Add(new RowDefinition());
+        }
+
+        for (int i = 1; i < storages.Count; i++)
+        {
+          
             Border border = new Border
             {
-                HeightRequest = 150,
+                HeightRequest = 250,
                 StrokeThickness = 0,
                 Padding = new Thickness(0, 10, 0, 10),
                 Content = new StackLayout
-                {
-                    new Image
-                    {
-                        Source = "fridge.png",
-                        HeightRequest = 100
-                    },
-                    new Label
-                    {
-                        Text = "FRIDGE",
-                        FontSize = 25,
-                        HorizontalOptions = LayoutOptions.Center,
-                        TextColor = Colors.Black,
-                        FontFamily = "BlackItalic"
-                    }
-                }
-            };
+            {
+            new Label
+            {
+                Text = "FRIDGE",
+                FontSize = 25,
+                HorizontalOptions = LayoutOptions.Center,
+                TextColor = Colors.Black,
+                FontFamily = "BlackItalic",
+            },
+            new Image
+            {
+                Source = "fridge.png",
+                HeightRequest = 100
+            },
+            new Button
+            {
+                Text = "OPEN",
+                WidthRequest = 80,
+                HeightRequest = 40,
+                Command = new Command(() => RedirectPage(storages[i-1]))
+            }}};
 
-            var tapGestureRecognizer = new TapGestureRecognizer();
-            tapGestureRecognizer.Tapped += Open;
-            border.GestureRecognizers.Add(tapGestureRecognizer);
 
 
-            storagesGrid.Add(border);
+            border.SetValue(Grid.RowProperty, i);
+            storagesGrid.Children.Add(border);
         }
+
+
+    }
+
+    private void RedirectPage(StorageField sf)
+    {
+        Navigation.PushAsync(new InsideStorage(info, sf));
     }
 
     public StoragePage(StorageViewmodel vm)
     {
         InitializeComponent();
         BindingContext = vm;
-    }
-
-    private void Open(object sender, EventArgs e)
-    {
-
-        if (sender is Border border && border.BindingContext is StorageField storage)
-        {
-
-            Navigation.PushAsync(new InsideStorage(info,storage));
-        }
     }
 
     private void AddNewStorage_Clicked(object sender, EventArgs e)
