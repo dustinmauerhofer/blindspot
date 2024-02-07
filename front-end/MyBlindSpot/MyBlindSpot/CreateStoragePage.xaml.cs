@@ -17,7 +17,7 @@ public partial class CreateStoragePage : ContentPage
     private void GenerateGrid()
     {
         int xcord = 7;
-        int ycord = 5;
+        int ycord = 4;
 
         storageGrid.RowDefinitions.Clear();
         storageGrid.ColumnDefinitions.Clear();
@@ -44,7 +44,7 @@ public partial class CreateStoragePage : ContentPage
                 {
                     BackgroundColor = Colors.Transparent,
                     HeightRequest = 90,
-                    WidthRequest = 110,
+                    WidthRequest = 125,
                     BorderColor = Colors.Transparent,
                     Margin= -20,
                     Content = new Border
