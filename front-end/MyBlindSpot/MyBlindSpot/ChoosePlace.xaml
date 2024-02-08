@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.ChoosePlace"
@@ -10,16 +10,16 @@
         </Grid.RowDefinitions>
 
         <ScrollView Grid.Row="0">
-            <VerticalStackLayout>
-                <Label Text="ADD ITEM" HorizontalTextAlignment="Center" FontSize="35" TextColor="#42BBFF" FontFamily="BlackItalic" Margin="0,5"/>
-                <Label Text="CHOOSE THE PLACE YOU WANT TO PUT THE ITEM IN" HorizontalTextAlignment="Center" FontSize="22" Margin="40,10" FontFamily="BlackItalic"/>
+            <Grid>
+                <Label Text="ADD ITEM" HorizontalTextAlignment="Center" FontSize="35" TextColor="#42BBFF" FontFamily="BlackItalic" Margin="0,10"/>
+                <Label Text="CHOOSE THE PLACE YOU WANT TO PUT THE ITEM IN" HorizontalTextAlignment="Center" FontSize="22" Margin="40,60" FontFamily="BlackItalic"/>
 
-                
-                <Grid x:Name="selectionGrid" HorizontalOptions="Center"></Grid>
+                <Grid x:Name="selectionGrid" VerticalOptions="Center" Margin="20,0"></Grid>
+
                 <FlexLayout Grid.Row="1" Direction="Column" BackgroundColor="Transparent">
-                    <Button Text="Continue" WidthRequest="300" HeightRequest="70" FontSize="30" Margin="80,20,140,20" BackgroundColor="#42BBFF" Clicked="ContinueToSpace_Clicked"/>
+                    <Button Text="Continue" WidthRequest="300" HeightRequest="70" FontSize="30" Margin="80,320,140,20" BackgroundColor="#42BBFF" Clicked="ContinueToSpace_Clicked"/>
                 </FlexLayout>
-            </VerticalStackLayout>
+            </Grid>
         </ScrollView>
 
       

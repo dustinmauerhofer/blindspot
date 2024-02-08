@@ -46,10 +46,10 @@ public partial class ChoosePlace : ContentPage
                 CustomFrame frame = new CustomFrame
                 {
                     BackgroundColor = Colors.Transparent,
-                    HeightRequest = 280,
-                    WidthRequest = 150,
+                    HeightRequest = 90,
+                    WidthRequest = 110,
                     BorderColor = Colors.Transparent,
-                    Margin = -30,
+                    Margin = -20,
                     Content = new Border
                     {
                         StrokeThickness = 3,
@@ -58,16 +58,12 @@ public partial class ChoosePlace : ContentPage
                         Content = new StackLayout
                         {
                             VerticalOptions = LayoutOptions.Center,
-                            Spacing = 10,
                             Children = {
                                 new Label
                                 {
                                     HorizontalOptions = LayoutOptions.Center,
                                     VerticalOptions = LayoutOptions.Center,
-                                    FontSize = 50,
-                                    Text = "+",
                                     TextColor = Colors.Black,
-                                    FontFamily="BlackItalic"
                                 }
 
                             }
