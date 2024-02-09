@@ -127,4 +127,8 @@ public partial class StoragePage : ContentPage
     {
         Navigation.PushAsync(new LoginPage()); // CHANGE!
     }
+
+    void Button_Clicked_1(System.Object sender, System.EventArgs e)
+    {
+    }
 }

@@ -28,7 +28,7 @@
 
             <VerticalStackLayout>
 
-                <Button Text="ADD TO YOUR STORAGE" 
+                <Button Text="ADD YOUR STORAGE" 
                     BackgroundColor="#42BBFF"
                     Margin="30,25,30,20"
                     Clicked="StorageDone_Clicked"

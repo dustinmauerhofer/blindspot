@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.StoragePage"
              Title="StoragePage">
 
-
-    <ScrollView>
+    <Grid>
+        
         <Label 
             Text="YOUR STORAGES" 
             HorizontalOptions="Center"
@@ -13,12 +13,19 @@
             FontSize="45"
             TextColor="#42BBFF"
             FontFamily="BlackItalic"/>
-    
-        <Grid x:Name="storagesGrid">
 
-        </Grid>
-    </ScrollView>
+        <ScrollView>
+            <Grid x:Name="storagesGrid"/>
+        </ScrollView>
 
+        <Button Text="TEST BUTTON (Create Storage) bis XAML FIX"
+                FontSize="8" WidthRequest="200"
+                HeightRequest="70"
+                Clicked="AddNewStorage_Clicked"
+                VerticalOptions="EndAndExpand"
+                Margin="20"
+                BackgroundColor="Black"/>
 
+    </Grid>
 
 </ContentPage>

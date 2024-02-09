@@ -19,8 +19,8 @@ public partial class AddItemPage : ContentPage
         SetGridLayout(loadedStorages.Count());
 
         //only for testing purpse
-        if(loadedStorages.Count() == 0)
-            loadedStorages.Add(new StorageField("",4, 4));
+        if (loadedStorages.Count() == 0)
+            loadedStorages.Add(new StorageField("", 4, 4));
         //
 
 
@@ -29,32 +29,37 @@ public partial class AddItemPage : ContentPage
             Border loadedLabel = new Border
             {
                 HeightRequest = 200,
+                WidthRequest = 150,
                 StrokeThickness = 0,
+                HorizontalOptions = LayoutOptions.Center,
 
                 Content = new StackLayout
                 {
                     new Image
                     {
                         HeightRequest=100,
-                        Source="fridge.png" //hier sollte man eig das passende bild zum storagetyp ausgeben
+                        Source="fridge.png", //hier sollte man eig das passende bild zum storagetyp ausgeben
+
                     },
                     new Label
                     {
-                        FontSize=25,
-                        Text=storage.Name,
+                        FontSize=20,
+                        Text="TEST", // Text=storage.Name läd keinen Namen rein, deshalb wurde das Label auch nicht angezeigt. – Vincent
                         HorizontalOptions= LayoutOptions.Center,
                         TextColor= Colors.Black,
                         FontFamily="BlackItalic",
+                        Margin=10,
 
                     },
                     new Button
                     {
                         Text="Add",
-                        Margin = new Thickness(20,10,20,0),
+                        WidthRequest=80,
+                        HeightRequest=45,
                         FontFamily="BlackItalic",
                         BackgroundColor=Color.FromHex("#CCCCCC"),
                         TextColor=Colors.Black,
-                        FontSize=22,
+                        FontSize=18,
                         Command = new Command(() => SendItem(storage))
                     }
                 }
@@ -67,7 +72,7 @@ public partial class AddItemPage : ContentPage
 
     public void SendItem(StorageField sf)
     {
-        Navigation.PushAsync(new ChoosePlace(storageInformation,sf,info));
+        Navigation.PushAsync(new ChoosePlace(storageInformation, sf, info));
     }
 
     private void SetGridLayout(int v)

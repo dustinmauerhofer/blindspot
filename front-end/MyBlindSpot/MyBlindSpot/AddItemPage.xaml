@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.AddItemPage"
              Title="AddItemPage">
-    <VerticalStackLayout x:Name="mainLayout">
+    <Grid x:Name="mainLayout">
         <Label 
             Text="ADD YOUR ITEM" 
             HorizontalOptions="Center"
@@ -12,23 +12,18 @@
             TextColor="#42BBFF" 
             FontFamily="BlackItalic"/>
         
-        <Grid x:Name="mainGrid"/>
+        <Grid x:Name="mainGrid" Margin="30,140,30,0"/>
 
-        <VerticalStackLayout Padding="0,390,0,0">
-           <Line Stroke="Black" X2="1000"/>
-
-           <Button     
-               Text="TAKE ME BACK"
-                  FontSize="40"
-               HorizontalOptions="Center"
-               TextColor="Black"
-               FontFamily="BlackItalic"
-               BackgroundColor="Transparent"
-               Margin="4"
-               Clicked="Back_Click"/>
-           
-       </VerticalStackLayout>
+        <FlexLayout Grid.Row="1" Direction="Column" BackgroundColor="Transparent">
+                    <Button Text="TAKE ME BACK"
+                            WidthRequest="300"
+                            HeightRequest="70"
+                            FontSize="30"
+                            Margin="80,320,140,20"
+                            BackgroundColor="#42BBFF"
+                            Clicked="Back_Click"/>
+                </FlexLayout>
 
 
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>
