@@ -3,13 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.InsideStorage"
              Title="InsideStorage">
-    <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="YOUR ITEMS"></Label>
-            <Grid x:Name="itemGrid"></Grid>
-            <!-- Tool bar hier einfügen-->
-        </VerticalStackLayout>
-    </ScrollView>
-   
-    
+    <StackLayout>
+        <Grid>
+        </Grid>
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
