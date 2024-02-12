@@ -13,11 +13,15 @@ public partial class ScanDonePage : ContentPage
     {
         InitializeComponent();
 
-        ByteArrayToImageSourceConverter converter = new ByteArrayToImageSourceConverter();
+        if(bytes != null)
+        {
+            ByteArrayToImageSourceConverter converter = new ByteArrayToImageSourceConverter();
 
-        //https://docs.telerik.com/devtools/maui/controls/imageeditor/loading-image
+            //https://docs.telerik.com/devtools/maui/controls/imageeditor/loading-image
 
-        picture.Source = converter.ConvertFrom(bytes);
+            picture.Source = converter.ConvertFrom(bytes);
+        }
+  
 
         evaluation.Text = e;
         storageInformation = new StorageInformation();

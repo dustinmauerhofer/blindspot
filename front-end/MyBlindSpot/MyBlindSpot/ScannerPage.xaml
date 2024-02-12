@@ -24,12 +24,6 @@
                         IsTorchOn="False" 
                         BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected" />
 
-
-            <Label
-             x:Name="barcodeResult"
-            SemanticProperties.HeadingLevel="Level1"
-             FontSize="32"
-             HorizontalOptions="Center" />
     </VerticalStackLayout>
     </ScrollView>
    
