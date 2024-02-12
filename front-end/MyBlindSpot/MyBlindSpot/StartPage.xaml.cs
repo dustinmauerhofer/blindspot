@@ -19,20 +19,21 @@ public partial class StartPage : ContentPage
 		BindingContext = vm;
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void Backbtn_Clicked(object sender, TappedEventArgs e)
     {
         // Back to Main
         Navigation.PopAsync();
     }
 
-    private void YourStorages_Click(object sender, EventArgs e)
+    private void Storagebtn_Clicked(object sender, TappedEventArgs e)
     {
         Navigation.PushAsync(new StoragePage(user));
+
     }
 
-    private void Camera_Click(object sender, EventArgs e)
+    private void Camerabtn_Clicked(object sender, TappedEventArgs e)
     {
-        // CAM NAVIGATION
         Navigation.PushAsync(new ScanProductsPage(user));
+
     }
 }

@@ -14,7 +14,6 @@ public partial class InsideStorage : ContentPage
         user = info;
         storageField = sf;
         PullNewItems();
-
     }
 
     private void PullNewItems()
@@ -45,9 +44,8 @@ public partial class InsideStorage : ContentPage
             WidthRequest = 300,
             HeightRequest = 70,
             FontSize = 30,
-            //Margin = 
-            ////Margin = "80,320,140,20"
-            //BackgroundColor = Color.FromRgba("#42BBFF"),
+            Margin = new Thickness(80, 320, 140, 20),
+            BackgroundColor = Color.FromRgba("#42BBFF"),
             //Clicked = "Back_Click",
         };
         var navigation = new Grid();
@@ -60,6 +58,10 @@ public partial class InsideStorage : ContentPage
             labels.Add(item.Name);
 
         listView.ItemsSource = labels;
+
+
+        //Java.Lang.IllegalStateException Nachricht = The specified child already has a parent. You must call removeView() on the child's parent first
+
 
         Content = new StackLayout
         {

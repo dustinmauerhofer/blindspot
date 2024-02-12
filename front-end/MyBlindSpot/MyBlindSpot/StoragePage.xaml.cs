@@ -72,7 +72,9 @@ public partial class StoragePage : ContentPage
 
     private void RedirectPage(StorageField sf)
     {
-        Navigation.PushAsync(new InsideStorage(info, sf));
+        Console.WriteLine();
+        InsideStorage insideStorage = new InsideStorage(info, sf);
+        Navigation.PushAsync(insideStorage);
     }
 
     public StoragePage(StorageViewmodel vm)
