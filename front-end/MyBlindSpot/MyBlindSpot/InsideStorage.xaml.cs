@@ -44,12 +44,13 @@ public partial class InsideStorage : ContentPage
             WidthRequest = 300,
             HeightRequest = 70,
             FontSize = 30,
-            Margin = new Thickness(80, 320, 140, 20),
-            BackgroundColor = Color.FromRgba("#42BBFF"),
-            //Clicked = "Back_Click",
+            Margin = new Thickness(30, 50, 30, 50),
+            BackgroundColor = Color.FromRgba("#42BBFF"),            
         };
+        takeMeBackbtn.Clicked += async (sender, args) => { await Navigation.PopAsync(); };
+
         var navigation = new Grid();
-        navigation.Add(addButton);
+        navigation.Add(takeMeBackbtn);
 
 
         var listView = new ListView();
@@ -62,11 +63,18 @@ public partial class InsideStorage : ContentPage
 
         //Java.Lang.IllegalStateException Nachricht = The specified child already has a parent. You must call removeView() on the child's parent first
 
+        
 
         Content = new StackLayout
         {
-            Children = { title, listView, footer, navigation }
+            Children = { title, listView, footer, navigation}
         };
 
+        var layout = Content as StackLayout;
+
+        //foreach (var item in layout.Children)
+        //{
+        //    Console.WriteLine(item);
+        //}
     }
 }

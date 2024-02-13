@@ -4,28 +4,32 @@
              x:Class="MyBlindSpot.StartPage"
              Title="StartPage">
     <Grid>
-        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0" VerticalOptions="Center">
             <Label 
-            Text="USE THE BUTTON IN THE MIDDLE TO VIEW YOU STORAGES"
-            HorizontalTextAlignment="Center"
-            FontSize="30"
-            FontFamily="black-italic"
-            Margin="0,0,10,50"/>
+                Text="USE THE BUTTON IN THE MIDDLE TO VIEW YOUR STORAGES"
+                HorizontalTextAlignment="Center"
+                FontSize="30"
+                FontFamily="black-italic"
+                Margin="0,0,0,60"/>
 
             <Label
                 Text="USE THE BUTTON ON THE RIGHT TO SCAN NEW PRODUCTS"
                 HorizontalTextAlignment="Center"
                 FontSize="30"
-                FontFamily="black-italic"/>
-
-
+                FontFamily="black-italic"
+                Margin="0,0,0,60"/>
         </VerticalStackLayout>
 
-        <FlexLayout>
+        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
 
             <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
 
-            <Grid FlexLayout.Grow="1">
+            <Grid FlexLayout.Grow="1" Margin="0,-610">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>

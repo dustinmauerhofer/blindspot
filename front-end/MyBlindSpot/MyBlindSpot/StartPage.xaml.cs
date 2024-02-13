@@ -36,4 +36,9 @@ public partial class StartPage : ContentPage
         Navigation.PushAsync(new ScanProductsPage(user));
 
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new StoragePage(user));
+    }
 }
