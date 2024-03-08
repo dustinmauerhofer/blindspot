@@ -4,7 +4,6 @@
              x:Class="MyBlindSpot.CreateStoragePage"
              Title="CreateStoragePage">
 
-    <ScrollView>
         <VerticalStackLayout>
             <Label 
        Text="CREATE NEW STORAGE" 
@@ -58,6 +57,5 @@
                 </Grid>
             </VerticalStackLayout>
         </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>
