@@ -4,8 +4,8 @@
              x:Class="MyBlindSpot.StoragePage"
              Title="StoragePage">
 
-    <Grid>
-        
+    <VerticalStackLayout>
+
         <Label 
             Text="YOUR STORAGES" 
             HorizontalOptions="Center"
@@ -18,6 +18,7 @@
             <Grid x:Name="storagesGrid"/>
         </ScrollView>
 
+
         <Button Text="TEST BUTTON (Create Storage) bis XAML FIX"
                 FontSize="8" WidthRequest="200"
                 HeightRequest="70"
@@ -25,7 +26,6 @@
                 VerticalOptions="EndAndExpand"
                 Margin="20"
                 BackgroundColor="Black"/>
-
-    </Grid>
+    </VerticalStackLayout>
 
 </ContentPage>
