@@ -23,7 +23,7 @@ public partial class ItemAdded : ContentPage
 
         // adding user data test
 
-        outputString += $",Id: {info.Id}, username: {info.UserName}";
+        outputString += $",jwt: {info.Jwt}, username: {info.UserName}";
         output.Text = outputString;
 
        

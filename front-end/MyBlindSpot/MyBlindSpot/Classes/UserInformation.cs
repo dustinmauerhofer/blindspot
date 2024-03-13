@@ -2,20 +2,22 @@
 
 namespace MyBlindSpot.Classes
 {
+
     public class UserInformation
     {
         private static UserInformation instance;
 
         // Properties
-        public int? Id { get; }
+        public string Jwt { get; }
         public string UserName { get; }
 
         // Private constructor to prevent instantiation outside the class
-        public UserInformation(int id, string username)
+        public UserInformation(string jwt, string username)
         {
-            Id = id;
+            Jwt = jwt;
             UserName = username;
-        }  
-       
+        }
+
+        public static User user;
     }
 }

@@ -1,6 +1,9 @@
 using MyBlindSpot.Classes;
+using System.Text.Json;
 
 namespace MyBlindSpot;
+
+public record User(string jwtToken, string userName);
 
 public partial class LoginPage : ContentPage
 {
@@ -34,12 +37,37 @@ public partial class LoginPage : ContentPage
     }
 
 
-    private void LoginSucceeded_Clicked(object sender, EventArgs e)
+    private async void LoginSucceeded_Clicked(object sender, EventArgs e)
     {
         //hier macht adam sachen
-        UserInformation info = new UserInformation(1, "TestAcc");
+        string userName = username.Text;
+        string pw = password.Text;
+
+        if (userName == null || pw == null)
+        {
+            ShowFeedbackFor5Sek("Enter a username and a password.");
+            return;
+        }
+
+        RegisterInformation login_info = new RegisterInformation(username.Text, pw);
+        HttpResponseMessage response = await APICalls.LoginAccount(login_info);
+
+        if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            string data = await response.Content.ReadAsStringAsync();
+            User user = JsonSerializer.Deserialize<User>(data);
+            ShowFeedbackFor5Sek(user.userName + user.jwtToken);
+
+            UserInformation info = new UserInformation(user.jwtToken, userName);
+            Navigation.PushAsync(new MainPage(info));
+        }
+        else
+        {
+            ShowFeedbackFor5Sek("Login failed. Check your username and password again.");
+        }
+
         
-        Navigation.PushAsync(new MainPage(info));
+        
     }
 
     private void GoToRegister_Tapped(object sender, TappedEventArgs e)

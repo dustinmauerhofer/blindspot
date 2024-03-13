@@ -15,11 +15,12 @@ public partial class RegisterPage : ContentPage
 
 
     private void Login_Clicked(object sender, EventArgs e)
-    {  
-        Navigation.PushAsync(new LoginPage());
+    {
+         Register_Succeded(null, null);
+        //Navigation.PushAsync(new LoginPage());
     }
 
-    private async void Register_Succeded(object sender, EventArgs e)
+    private async void Register_Succeded(Object sender, EventArgs e)
     {
         RegisterInformation info = new RegisterInformation(username.Text, password.Text);
         HttpResponseMessage response = await APICalls.RegisterAccount(info);
@@ -29,10 +30,12 @@ public partial class RegisterPage : ContentPage
 
         //Task.Run(() =>
         //{
-            Handler.Invoke(this, new RegisterArgs(response.ToString()));
+            Handler.Invoke(this, new RegisterArgs(await response.Content.ReadAsStringAsync()));
         //});
 
 
         Navigation.PushAsync(page);
+
+        
     }
 }

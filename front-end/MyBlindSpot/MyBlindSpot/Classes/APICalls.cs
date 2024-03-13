@@ -48,11 +48,19 @@ namespace MyBlindSpot.Classes
 
         }
 
-        public static  Task<HttpResponseMessage> RegisterAccount(RegisterInformation info)
+        public static async Task<HttpResponseMessage> RegisterAccount(RegisterInformation info)
         {
             string jsonString = JsonSerializer.Serialize(info);
             HttpContent content = new StringContent(jsonString, Encoding.UTF8, contentType);
-            var response = client.PostAsync($"{apiUrl}users/register", content);
+            var response = await client.PostAsync($"{apiUrl}users/register", content);
+            return response;
+        }
+
+        public static async Task<HttpResponseMessage> LoginAccount(RegisterInformation info)
+        {
+            string jsonString = JsonSerializer.Serialize(info);
+            HttpContent content = new StringContent(jsonString, Encoding.UTF8, contentType);
+            var response = await client.PostAsync($"{apiUrl}users/login", content);
             return response;
         }
     }

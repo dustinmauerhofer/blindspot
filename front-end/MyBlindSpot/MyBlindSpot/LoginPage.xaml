@@ -22,7 +22,7 @@
             TextColor="#42BBFF"
             FontFamily="BlackItalic"/>
 
-            <Entry Placeholder="USERNAME" 
+            <Entry x:Name="username" Placeholder="USERNAME" 
                TextColor="#444444" 
                FontSize="25"
                HorizontalTextAlignment="Center" 
@@ -30,7 +30,7 @@
                HeightRequest="60"
                Margin="30,0,30,10"/>
 
-            <Entry Placeholder="PASSWORD" 
+            <Entry x:Name="password" Placeholder="PASSWORD" 
                   TextColor="#444444" 
                   FontSize="25"
                   HorizontalTextAlignment="Center" 
