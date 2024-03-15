@@ -70,4 +70,15 @@ public partial class BlindMenuPage : ContentPage
     {
         Navigation.PushAsync(new MainPage(info));
     }
+
+    void GoBack_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+        Navigation.PushAsync(new MainPage(info));
+    }
+
+    // TEMP NAVIGATION!
+    void OpenStorage_Clicked(System.Object sender, System.EventArgs e)
+    {
+        //Navigation.PushAsync(new StoragePage(null));
+    }
 }

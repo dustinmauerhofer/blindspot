@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyBlindSpot.BlindMenuPage"
              Title="BlindMenuPage">
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+    <Grid>
             <VerticalStackLayout>
                 <Grid>
-                    <Label
-         Text="BLIND
-         PERSON" 
-         HorizontalTextAlignment="Center"
-         FontSize="50"
-         TextColor="#42BBFF"
-         FontFamily="BlackItalic"
-         Margin="0,30,0,0"/>
+
+                    <Label Text="BLIND
+                         PERSON" 
+                         HorizontalTextAlignment="Center"
+                         FontSize="50"
+                         TextColor="Black"
+                         FontFamily="BlackItalic"
+                         Margin="0,30,0,0"/>
                 </Grid>
 
 
@@ -25,18 +22,54 @@
                         HorizontalOptions="Center" 
                         FontSize="24"/>
 
-                <Button Text="Listen"
-    Command="{Binding RecognitionText}"
-    HorizontalOptions="Center"
-    VerticalOptions="Center"/>
+                <Image Source="speaker.png" WidthRequest="300"
+                        Margin="0,100,0,0"/>
+
+                <Label Text="What you need, friend"
+                       HorizontalOptions="Center"
+                       FontSize="24"
+                       Margin="0,20,0,0"/>
+
+               
+
+
+            </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="0,400,0,0" Opacity="0.2"> 
+         <Button Text="Listen"
+                Command="{Binding RecognitionText}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="0,30,0,0"/>
 
                 <Button Text="Listen Cancel"
-    Command="{Binding ListenCancelCommand}"
-    HorizontalOptions="Center"
-    VerticalOptions="Center"/>
-
-                <Button Text="Back to Main" Clicked="Button_Clicked"/>
-            </VerticalStackLayout>
+                Command="{Binding ListenCancelCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="0,10,0,0"/>
         </VerticalStackLayout>
-    </ScrollView>
+
+        <VerticalStackLayout>
+            
+                <Button Text="OPEN STORAGES"
+                            WidthRequest="300"
+                            HeightRequest="70"
+                            FontSize="30"
+                            Margin="0,550,0,0"
+                            BackgroundColor="#42BBFF"
+                            Clicked="OpenStorage_Clicked"
+                            />
+              
+
+                <Image Source="back.png"
+                       WidthRequest="80"
+                       Margin="0,20,0,0">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoBack_Tapped"/>
+                    </Image.GestureRecognizers>
+
+                </Image>
+            </VerticalStackLayout>
+    </Grid>
 </ContentPage>

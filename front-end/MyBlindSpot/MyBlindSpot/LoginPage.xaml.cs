@@ -79,4 +79,10 @@ public partial class LoginPage : ContentPage
     {
         Navigation.PushAsync(new RegisterPage());
     }
+
+    // TEMP für Vincent damit GUI gemacht werden kann
+    private void GoBlindMenu(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new MainPage(null));
+    }
 }

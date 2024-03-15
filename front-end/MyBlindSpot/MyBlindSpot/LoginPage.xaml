@@ -72,5 +72,14 @@
 
             <Label x:Name="feedbackPopUp"></Label>
         </VerticalStackLayout>
+
+        <FlexLayout>
+            <Button Text="Go to blindmenu page (für vincent)"
+                    WidthRequest="400"
+                    HeightRequest="50"
+                    Margin="70,500"
+                    Clicked="GoBlindMenu"/>
+        </FlexLayout>
+
     </Grid>
 </ContentPage>
