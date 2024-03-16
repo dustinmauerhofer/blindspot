@@ -44,7 +44,7 @@
             HorizontalTextAlignment="Center" 
             BackgroundColor="#D9D9D9"
             HeightRequest="60"
-            Margin="30,0,30,10"/>
+            Margin="30,0,30,10" x:Name="confirm_pw"/>
 
         <Grid>
             <HorizontalStackLayout HorizontalOptions="Center">
