@@ -4,28 +4,71 @@
              x:Class="MyBlindSpot.StoragePage"
              Title="StoragePage">
 
-    <VerticalStackLayout>
-
+   <Grid>
         <Label 
             Text="YOUR STORAGES" 
             HorizontalOptions="Center"
-            Padding="0,5,0,15"
             FontSize="45"
             TextColor="#42BBFF"
-            FontFamily="BlackItalic"/>
+            FontFamily="BlackItalic"
+            Margin="0,20"/>
 
-        <ScrollView>
+        <ScrollView HeightRequest="450"
+                    Padding="10"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Margin="0,100">
+
             <Grid x:Name="storagesGrid"/>
         </ScrollView>
 
+       <FlexLayout HorizontalOptions="Center">
+           <Button Text="CREATE A NEW STORAGE"
+                   BackgroundColor="#42BBFF"
+                    FontSize="20"
+                    WidthRequest="280"
+                    HeightRequest="50"
+                    Clicked="AddNewStorage_Clicked"
+                   Margin="0,590"/>
+        </FlexLayout>
 
-        <Button Text="TEST BUTTON (Create Storage) bis XAML FIX"
-                FontSize="8" WidthRequest="200"
-                HeightRequest="70"
-                Clicked="AddNewStorage_Clicked"
-                VerticalOptions="EndAndExpand"
-                Margin="20"
-                BackgroundColor="Black"/>
-    </VerticalStackLayout>
+        <FlexLayout Wrap="Wrap" Direction="Row" Margin="10">
 
+            <BoxView Color="Black" HeightRequest="3" HorizontalOptions="FillAndExpand" Margin="0,650"/>
+
+            <Grid FlexLayout.Grow="1" Margin="0,-610">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="back.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="1" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="drawer.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Border Grid.Column="2" HeightRequest="65" WidthRequest="50" StrokeThickness="0">
+                    <Image Source="camera.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+            </Grid>
+
+        </FlexLayout>
+
+       </Grid>
 </ContentPage>
